@@ -2,6 +2,7 @@
 #include <iostream>
 
 // Local
+#include "interface/api.h"
 #include "interface/client.h"
 /**
  * Steps
@@ -26,11 +27,22 @@
  *
  */
 
+// TODO set never exit flag
+// TODO use cli library
+// TODO get into json values
+
 int main()
 {
     std::cout << "Interface starting..." << std::endl;
 
-    HttpClient client("localhost:8080", true);
+    // Assuming multiple interfaces on a single server abstract the client so a singleton will be
+    // passed to all needed interfaces
+    auto client = std::make_shared<HttpClient>("localhost:8080", true);
+    LightsInterface lightsInterface(client);
+
+    lightsInterface.getInitalStatus();
+
+    lightsInterface.poll();
     // auto response = cli.Get("/lights");
 
     // std::cout << response->status << std::endl;

@@ -11,3 +11,12 @@ HttpClient::HttpClient(std::string serverAddress, bool keepAlive)
     this->connection->set_read_timeout(5, 0);            // 5 seconds
     this->connection->set_write_timeout(5, 0);           // 5 seconds
 }
+
+json HttpClient::get(std::string command)
+{
+    // TODO: handle errors
+    auto response = this->connection->Get(command);
+    // std::cout << response->body << std::endl;
+    auto parsedData = json::parse(response->body);
+    return parsedData;
+}

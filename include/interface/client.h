@@ -4,11 +4,19 @@
 #include <memory>
 
 #include "cpp-httplib/httplib.h"
+#include <nlohmann/json.hpp>
+
+// for convenience
+using json = nlohmann::json;
 
 class HttpClient
 {
   public:
     HttpClient(std::string serverAddress, bool keepAlive = true);
+
+    // Returns sucess codes
+    json get(std::string command);
+    int push();
 
   private:
     std::string serverAddress;
