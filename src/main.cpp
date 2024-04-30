@@ -2,14 +2,13 @@
 #include <iostream>
 
 // Local
-#include "cpp-httplib/httplib.h"
-
+#include "interface/client.h"
 /**
  * Steps
  * 1) Read state of all lights
  * 2) Condition data (brightness 0-255 to 0-100 etc)
  * 3) Print out to consol json data
- * 4) Monitor (long pull?) for changes to the server
+ * 4) Monitor (pulling) for changes to the server
  * 5) Update consol with changes
  * 6) Handle errors (http fails, json fails) -> inform and recover
  * 7) Docs, Docs, Docs
@@ -31,11 +30,11 @@ int main()
 {
     std::cout << "Interface starting..." << std::endl;
 
-    httplib::Client cli("http://localhost:8080");
-    auto response = cli.Get("/lights");
+    HttpClient client("localhost:8080", true);
+    // auto response = cli.Get("/lights");
 
-    std::cout << response->status << std::endl;
-    std::cout << response->body << std::endl;
+    // std::cout << response->status << std::endl;
+    // std::cout << response->body << std::endl;
 
     return 0;
 }
