@@ -2,8 +2,9 @@
 #include <iostream>
 
 // Local
-#include "interface/api.h"
-#include "interface/client.h"
+#include "interface/connection_manager.h"
+#include "interface/data_store.h"
+#include "interface/light_interface.h"
 /**
  * Steps
  * 1) Read state of all lights
@@ -30,23 +31,25 @@
 // TODO set never exit flag
 // TODO use cli library
 // TODO get into json values
+// TODO handle when server is down so no seggfault
+// TODO: add tclap argument for ip and port, and keepAlive
+
+// convertJsonDataFunciton()
 
 int main()
 {
-    std::cout << "Interface starting..." << std::endl;
-
     // Assuming multiple interfaces on a single server abstract the client so a singleton will be
     // passed to all needed interfaces
-    auto client = std::make_shared<HttpClient>("localhost:8080", true);
-    LightsInterface lightsInterface(client);
 
-    lightsInterface.getInitalStatus();
+    // Set up the shared objects for the system
+    auto clientConnection = std::make_shared<ConnectionManager>("localhost:8080", true);
+    auto dataStore = std::make_shared<DataStore>();
 
-    lightsInterface.poll();
-    // auto response = cli.Get("/lights");
+    LightsInterface lightsInterface(clientConnection, dataStore);
 
-    // std::cout << response->status << std::endl;
-    // std::cout << response->body << std::endl;
+    // Run continuous monitoring (NOTE: If this were to expanded to multiple devices then the
+    // interface run() should be threaded, right now it is blocking)
+    lightsInterface.run();
 
     return 0;
 }

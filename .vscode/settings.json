@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.html.erb": "erb",
         "*.tcc": "cpp",
         "compare": "cpp",
         "type_traits": "cpp",
@@ -63,6 +64,15 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "csignal": "cpp",
+        "any": "cpp",
+        "condition_variable": "cpp",
+        "codecvt": "cpp",
+        "semaphore": "cpp"
     }
 }
