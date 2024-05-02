@@ -10,6 +10,8 @@
 
 ### Execution Instructions
 
+Release binary or ./executable
+
 ## Documentation
 
 ### Building API docs

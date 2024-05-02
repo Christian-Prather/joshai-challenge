@@ -26,7 +26,6 @@
  *
  */
 
-// TODO Templatized
 template <typename T> class DataStore
 {
   public:
@@ -64,7 +63,7 @@ template <typename T> class DataStore
      * @return true Device is new
      * @return false Device was already added to the server
      */
-    bool newEntry(std::string id)
+    bool newEntry(std::string& id)
     {
         if (this->records.find(id) == this->records.end())
         {
@@ -82,7 +81,7 @@ template <typename T> class DataStore
      * @return true Device has been modified
      * @return false Device has not been modified
      */
-    bool editedEntry(std::string id, std::string newHash)
+    bool editedEntry(std::string& id, std::string& newHash)
     {
         // If this is called we have already checked if the device has been seen before
         auto oldDeviceRecord = this->getRecord(id);
@@ -100,18 +99,16 @@ template <typename T> class DataStore
      * @param id Device in question's unique id
      * @return T device type
      */
-    T getRecord(std::string id) { return this->records.at(id); }
+    T& getRecord(std::string& id) { return this->records.at(id); }
 
     /**
      * @brief Get all the past records from the server (every device)
      *
      * @return std::unordered_map<std::string, <Device Type>> unique device id keyed
      */
-    std::unordered_map<std::string, T> getData() { return records; }
+    std::unordered_map<std::string, T>& getData() { return records; }
 
   private:
-    // TODO: Templetize this or make one for each device type
-
     /// Hashmap of devices using device id as key, done for quick access and lookup time
     std::unordered_map<std::string, T> records;
 };

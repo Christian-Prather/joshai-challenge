@@ -52,11 +52,11 @@ class ConnectionManager
 
     /**
      * @brief Returns full response from server to a get command
-     * 
+     *
      * @param command String command ("/lights", "/lights/{id}")
      * @return ServerResponse Full response in json and status from server
      */
-    ServerResponse get(std::string command);
+    ServerResponse get(std::string& command);
 
   private:
     /// IP address of server

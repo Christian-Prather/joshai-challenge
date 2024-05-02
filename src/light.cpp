@@ -28,6 +28,11 @@ void Light::generateHash()
 
 int Light::convertBrightness(int value)
 {
+    if (value > 255)
+    {
+        // Value max larger then expected setting to %100
+        return 100;
+    }
     return (float(value / 255.0)) * 100;
 }
 

@@ -1,6 +1,7 @@
 #include "interface/light_interface.h"
 
-// TODO go through all code and make sure passing data efficiently
+// TODO define http command strings
+// TODO define error codes
 
 LightsInterface::LightsInterface(std::shared_ptr<ConnectionManager> connectionManager,
                                  std::shared_ptr<DataStore<Light>> dataStore)
@@ -14,8 +15,8 @@ void buildDeviceObject()
 {
     // Reused loop code in both getInitalStatus and run for building a device type
 
-    // TODO in situations were the device was already seen by the progream and has not changed it
-    // would be more efficent to just get the Light object already built in the data store rather
+    // TODO in situations were the device was already seen by the program and has not changed it
+    // would be more efficient to just get the Light object already built in the data store rather
     // then create a new object, this would rewquire a check for devcice existin in map and if its
     // the same at this level however and that is currently handled in the data store
 }
@@ -23,20 +24,21 @@ void buildDeviceObject()
 void LightsInterface::getInitalStatus()
 {
     // Get data from server
-    auto serverRespons = this->connectionManager->get("/lights");
+    std::string command = "/lights";
+    auto serverRespons = this->connectionManager->get(command);
 
     // Data structure for pretty printing. TODO: look at more efficient way to not reallocate memory
     // for the same data
     std::vector<json> formattedIntialData;
 
     // Go through each light reported by the server
-    for (auto light : serverRespons.body)
+    for (auto& light : serverRespons.body)
     {
         // Get device id for reuse
         std::string deviceId = light["id"];
 
         // Get more details on specific device (note: need to handle delete race condition)
-        std::string command = "/lights/" + deviceId;
+        command = "/lights/" + deviceId;
         auto detailedLight = this->connectionManager->get(command);
         // Check if light record was still found in the server by the time we wanted to get more
         // info on it
@@ -75,7 +77,8 @@ void LightsInterface::run()
     // Run until user terminates program and get updates on devices
     while (true)
     {
-        auto serverResonse = this->connectionManager->get("/lights");
+        std::string command = "/lights";
+        auto serverResponse = this->connectionManager->get(command);
 
         // Build a hash map for fast comparison of deleted devices
         std::unordered_map<std::string, Light> newRecord;
@@ -83,7 +86,7 @@ void LightsInterface::run()
         auto pastRecordCopy = this->dataStore->getData();
 
         // For each light recently reported by the server
-        for (auto light : serverResonse.body)
+        for (auto& light : serverResponse.body)
         {
             std::string deviceId = light["id"];
 
@@ -123,7 +126,7 @@ void LightsInterface::run()
                 pastRecordCopy.erase(deviceId);
 
                 // Device is found need to check if all info matches
-                if (this->dataStore->editedEntry(deviceId, device.hashString))
+                if (this->dataStore->getRecord(deviceId) != device)
                 {
                     // Devices dont match find delta
                     auto pastDeviceRecord = this->dataStore->getRecord(deviceId);

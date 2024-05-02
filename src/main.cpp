@@ -28,9 +28,6 @@
  *
  */
 
-// TODO set never exit flag
-// TODO use cli library
-// TODO get into json values
 // TODO handle when server is down so no seggfault
 // TODO: add tclap argument for ip and port, and keepAlive
 

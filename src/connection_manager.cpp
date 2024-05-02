@@ -16,7 +16,7 @@ ConnectionManager::ConnectionManager(std::string serverAddress, bool keepAlive)
     this->connection->set_write_timeout(5, 0);           // 5 seconds
 }
 
-ServerResponse ConnectionManager::get(std::string command)
+ServerResponse ConnectionManager::get(std::string& command)
 {
     // Empty packet from server
     auto packet = ServerResponse();

@@ -12,9 +12,6 @@
 
 #include <iostream>
 
-// TODO operator override the light stuct to use == and != checks
-// TODO: look at any operators on classes I should remove such as copy
-
 /**
  * @brief Light specific device
  * @note This could be abstracted to inherit from a device parent class
@@ -67,3 +64,15 @@ class Light
      */
     void parseData();
 };
+
+// Operator overload for ==
+inline bool operator==(const Light& lhs, const Light& rhs)
+{
+    if (lhs.hashString == rhs.hashString)
+    {
+        return true;
+    }
+    return false;
+}
+
+inline bool operator!=(const Light& lhs, const Light& rhs) { return !(lhs == rhs); }
