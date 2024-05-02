@@ -3,7 +3,7 @@
 // TODO go through all code and make sure passing data efficiently
 
 LightsInterface::LightsInterface(std::shared_ptr<ConnectionManager> connectionManager,
-                                 std::shared_ptr<DataStore> dataStore)
+                                 std::shared_ptr<DataStore<Light>> dataStore)
 {
     // Setup members
     this->connectionManager = connectionManager;

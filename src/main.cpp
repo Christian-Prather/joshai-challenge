@@ -43,7 +43,7 @@ int main()
 
     // Set up the shared objects for the system
     auto clientConnection = std::make_shared<ConnectionManager>("localhost:8080", true);
-    auto dataStore = std::make_shared<DataStore>();
+    auto dataStore = std::make_shared<DataStore<Light>>();
 
     LightsInterface lightsInterface(clientConnection, dataStore);
 

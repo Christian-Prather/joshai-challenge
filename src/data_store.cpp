@@ -1,6 +1,6 @@
 #include "interface/data_store.h"
 
-void DataStore::addInitalDevice(Light device)
+template <typename T> void DataStore::addInitalDevice(T device)
 {
     // By the time data is here it should have already be processed the way it should be
 

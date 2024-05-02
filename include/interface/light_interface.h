@@ -29,7 +29,7 @@ class LightsInterface
      * @param dataStore The internal subsystem data storage and sharing mechanism
      */
     LightsInterface(std::shared_ptr<ConnectionManager> connectionManager,
-                    std::shared_ptr<DataStore> dataStore);
+                    std::shared_ptr<DataStore<Light>> dataStore);
 
     /**
      * @brief The blocking function call to continuously update the system on changes to the server
@@ -49,5 +49,5 @@ class LightsInterface
     /// Reference to the server client connection
     std::shared_ptr<ConnectionManager> connectionManager;
     /// Reference to the dataStore
-    std::shared_ptr<DataStore> dataStore;
+    std::shared_ptr<DataStore<Light>> dataStore;
 };
