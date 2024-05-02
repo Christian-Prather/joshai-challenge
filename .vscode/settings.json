@@ -73,6 +73,7 @@
         "any": "cpp",
         "condition_variable": "cpp",
         "codecvt": "cpp",
-        "semaphore": "cpp"
+        "semaphore": "cpp",
+        "variant": "cpp"
     }
 }

@@ -48,7 +48,7 @@ class ConnectionManager
      * @param serverAddress IP address
      * @param keepAlive true if http connection should use keepAlive header
      */
-    ConnectionManager(std::string serverAddress, bool keepAlive = true);
+    ConnectionManager(std::string serverAddress, bool keepAlive);
 
     /**
      * @brief Returns full response from server to a get command

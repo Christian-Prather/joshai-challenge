@@ -1,7 +1,12 @@
+#include <chrono>
+#include <thread>
+
 #include "interface/light_interface.h"
 
-// TODO define http command strings
-// TODO define error codes
+using namespace std::chrono_literals;
+
+const std::string GENERIC_LIGHTS_COMMAND = "/lights";
+const int DEVICE_MISSING = 404;
 
 LightsInterface::LightsInterface(std::shared_ptr<ConnectionManager> connectionManager,
                                  std::shared_ptr<DataStore<Light>> dataStore)
@@ -11,20 +16,45 @@ LightsInterface::LightsInterface(std::shared_ptr<ConnectionManager> connectionMa
     this->dataStore = dataStore;
 }
 
-void buildDeviceObject()
+void LightsInterface::buildInitalDeviceObjects(json light, std::vector<json>& formattedIntialData)
 {
-    // Reused loop code in both getInitalStatus and run for building a device type
-
     // TODO in situations were the device was already seen by the program and has not changed it
     // would be more efficient to just get the Light object already built in the data store rather
-    // then create a new object, this would rewquire a check for devcice existin in map and if its
+    // then create a new object, this would require a check for device existing in map and if its
     // the same at this level however and that is currently handled in the data store
+
+    // Get device id for reuse
+    std::string deviceId = light["id"];
+
+    // Get more details on specific device (note: need to handle delete race condition)
+    std::string command = GENERIC_LIGHTS_COMMAND + "/" + deviceId;
+    auto detailedLight = this->connectionManager->get(command);
+    // Check if light record was still found in the server by the time we wanted to get more
+    // info on it.
+    // If expression is false the device not found on server anymore, likely deleted between query
+    // time
+    if (detailedLight.returnCode != DEVICE_MISSING)
+    {
+        // If here the device is still seen by the server so construct and light specific object.
+        // Note this auto creates the hash as well.
+        auto device =
+            Light(detailedLight.body["brightness"], detailedLight.body["id"],
+                  detailedLight.body["name"], detailedLight.body["on"], detailedLight.body["room"]);
+
+        // Add device to master record
+        this->dataStore->addInitalDevice(device);
+        // Update the brightness value to be percent for printing. (Note this happens
+        // automatically when light object was created, just not for pretty printing)
+        detailedLight.body["brightness"] = device.brightness;
+        // Add light to printing structure
+        formattedIntialData.push_back(detailedLight.body);
+    }
 }
 
 void LightsInterface::getInitalStatus()
 {
     // Get data from server
-    std::string command = "/lights";
+    std::string command = GENERIC_LIGHTS_COMMAND;
     auto serverRespons = this->connectionManager->get(command);
 
     // Data structure for pretty printing. TODO: look at more efficient way to not reallocate memory
@@ -34,33 +64,7 @@ void LightsInterface::getInitalStatus()
     // Go through each light reported by the server
     for (auto& light : serverRespons.body)
     {
-        // Get device id for reuse
-        std::string deviceId = light["id"];
-
-        // Get more details on specific device (note: need to handle delete race condition)
-        command = "/lights/" + deviceId;
-        auto detailedLight = this->connectionManager->get(command);
-        // Check if light record was still found in the server by the time we wanted to get more
-        // info on it
-        if (detailedLight.returnCode == 404)
-        {
-            // Device not found on server anymore, likely deleted between query time
-            continue;
-        }
-
-        // If here the device is still seen by the server so construct and light specific object.
-        // Note this auto creates the hash as well.
-        auto device =
-            Light(detailedLight.body["brightness"], detailedLight.body["id"],
-                  detailedLight.body["name"], detailedLight.body["on"], detailedLight.body["room"]);
-
-        // Add device to master record
-        this->dataStore->addInitalDevice(device);
-        // Update the brightness value to be percent for printing. (Note this happens automatically
-        // when light object was created, just not for pretty printing)
-        detailedLight.body["brightness"] = device.brightness;
-        // Add light to printing structure
-        formattedIntialData.push_back(detailedLight.body);
+        this->buildInitalDeviceObjects(light, formattedIntialData);
     }
 
     // TODO run through print class
@@ -68,16 +72,22 @@ void LightsInterface::getInitalStatus()
     std::cout << jsonList.dump(4) << std::endl;
 }
 
-// TODO: Add hz argument to throttle connection
-void LightsInterface::run()
+void LightsInterface::run(int hz)
 {
     // Setup initial state records
     this->getInitalStatus();
 
+    // Find target ms delay
+    int targetDelta = 1000 / hz;
+
     // Run until user terminates program and get updates on devices
     while (true)
     {
-        std::string command = "/lights";
+        // TODO much of this is a repeat from the initial list construction but due to slight
+        // additional checks is not a direct copy. Ideally this code should not be so wet.
+        const auto startTime = std::chrono::high_resolution_clock::now();
+
+        std::string command = GENERIC_LIGHTS_COMMAND;
         auto serverResponse = this->connectionManager->get(command);
 
         // Build a hash map for fast comparison of deleted devices
@@ -91,11 +101,11 @@ void LightsInterface::run()
             std::string deviceId = light["id"];
 
             // Get more details on specific device (note: need to handle delete race condition)
-            std::string command = "/lights/" + deviceId;
+            std::string command = GENERIC_LIGHTS_COMMAND + "/" + deviceId;
             auto detailedLight = this->connectionManager->get(command);
             // Check if light record was still found in the server by the time we wanted to get more
             // info on it
-            if (detailedLight.returnCode == 404)
+            if (detailedLight.returnCode == DEVICE_MISSING)
             {
                 // Device not found on server anymore, likely deleted between query time
                 continue;
@@ -111,7 +121,6 @@ void LightsInterface::run()
             // Check if device is new
             if (this->dataStore->newEntry(deviceId))
             {
-                // std::cout << "New device from server" << std::endl;
                 detailedLight.body["brightness"] = device.brightness;
 
                 std::cout << detailedLight.body.dump(4) << std::endl;
@@ -179,5 +188,16 @@ void LightsInterface::run()
 
         // Update new device list
         this->dataStore->updateData(newRecord);
+
+        // Delay time
+        const auto endTime = std::chrono::high_resolution_clock::now();
+
+        auto elapsedTime =
+            std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime).count();
+
+        if (elapsedTime < targetDelta)
+        {
+            std::this_thread::sleep_for(std::chrono::milliseconds(targetDelta - elapsedTime));
+        }
     }
 }

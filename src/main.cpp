@@ -5,6 +5,10 @@
 #include "interface/connection_manager.h"
 #include "interface/data_store.h"
 #include "interface/light_interface.h"
+
+// Third party
+#include "tclap/CmdLine.h"
+
 /**
  * Steps
  * 1) Read state of all lights
@@ -28,25 +32,70 @@
  *
  */
 
-// TODO handle when server is down so no seggfault
-// TODO: add tclap argument for ip and port, and keepAlive
+struct Arguments
+{
+    std::string serverIp;
+    std::string portNumber;
+    int pollHz;
+    bool keepAlive;
+};
 
-// convertJsonDataFunciton()
+Arguments parseArgs(int argc, char* argv[])
+{
+    TCLAP::CmdLine cmd("Josh.ai CLI", ' ', "1.0.0");
 
-int main()
+    // Command to pass in server ip
+    TCLAP::ValueArg<std::string> hostArg("a", "server-address", "The server address.", false,
+                                         "localhost", "string");
+
+    // Command to pass in server port
+    TCLAP::ValueArg<std::string> portArg("p", "port", "Port number.", false, "8080", "string");
+
+    // Command to pass in poll rate. Default is -1 which is means dont wait at all go as fast as
+    // possible.
+    TCLAP::ValueArg<int> rateArg(
+        "r", "rate",
+        "Rate for client to poll server for updates. (Not a guarantee, if client can not keep up)",
+        false, -1, "int");
+
+    // Command to set keepAlive header or not
+    TCLAP::SwitchArg keepAlive("k", "keep-alive",
+                               "Make connections with keepAlive header, defaults to true", true);
+
+    cmd.add(hostArg);
+    cmd.add(portArg);
+    cmd.add(rateArg);
+    cmd.add(keepAlive);
+
+    // Parse the argv array.
+    cmd.parse(argc, argv);
+
+    auto arguments = Arguments();
+    arguments.serverIp = hostArg.getValue();
+    arguments.portNumber = portArg.getValue();
+    arguments.pollHz = rateArg.getValue();
+    arguments.keepAlive = keepAlive;
+
+    return arguments;
+}
+
+int main(int argc, char* argv[])
 {
     // Assuming multiple interfaces on a single server abstract the client so a singleton will be
     // passed to all needed interfaces
 
+    const auto args = parseArgs(argc, argv);
+
     // Set up the shared objects for the system
-    auto clientConnection = std::make_shared<ConnectionManager>("localhost:8080", true);
+    auto clientConnection =
+        std::make_shared<ConnectionManager>(args.serverIp + ":" + args.portNumber, args.keepAlive);
     auto dataStore = std::make_shared<DataStore<Light>>();
 
     LightsInterface lightsInterface(clientConnection, dataStore);
 
     // Run continuous monitoring (NOTE: If this were to expanded to multiple devices then the
     // interface run() should be threaded, right now it is blocking)
-    lightsInterface.run();
+    lightsInterface.run(args.pollHz);
 
     return 0;
 }

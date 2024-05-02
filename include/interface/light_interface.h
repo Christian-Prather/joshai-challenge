@@ -11,6 +11,8 @@
  */
 #pragma once
 
+#include <optional>
+
 #include "interface/connection_manager.h"
 #include "interface/data_store.h"
 
@@ -34,10 +36,14 @@ class LightsInterface
     /**
      * @brief The blocking function call to continuously update the system on changes to the server
      * regarding lights
+     *
+     * @param hz Rate the interface should query the server (-1 will be as fast as possible) Ex. 10
+     * would be 10 times a second.
+     *
      * @note If more then one device interface is used this will need to be made to run on a thread
      * and be non blocking to the main program
      */
-    void run();
+    void run(int hz);
 
   private:
     /**
@@ -45,6 +51,10 @@ class LightsInterface
      *
      */
     void getInitalStatus();
+
+    void buildInitalDeviceObjects(json light, std::vector<json>& formattedIntialData);
+
+    std::optional<Light> buildLightDevice(json light);
 
     /// Reference to the server client connection
     std::shared_ptr<ConnectionManager> connectionManager;
