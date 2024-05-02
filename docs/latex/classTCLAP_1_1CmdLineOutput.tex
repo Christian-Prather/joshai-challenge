@@ -1,0 +1,103 @@
+\hypertarget{classTCLAP_1_1CmdLineOutput}{}\doxysection{TCLAP\+::Cmd\+Line\+Output Class Reference}
+\label{classTCLAP_1_1CmdLineOutput}\index{TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}}
+
+
+The interface that any output object must implement.  
+
+
+
+
+{\ttfamily \#include $<$Cmd\+Line\+Output.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Cmd\+Line\+Output\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1CmdLineOutput__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLineOutput_afdf4435a2619076d9798a0a950ed405b}\label{classTCLAP_1_1CmdLineOutput_afdf4435a2619076d9798a0a950ed405b}} 
+virtual \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_afdf4435a2619076d9798a0a950ed405b}{$\sim$\+Cmd\+Line\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_a685b13db5bf6bbe5159e49169cd96bbe}{usage}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)=0
+\begin{DoxyCompactList}\small\item\em Generates some sort of output for the USAGE. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ae052fea473132482296de55edb3dd480}{version}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)=0
+\begin{DoxyCompactList}\small\item\em Generates some sort of output for the version. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ad23a57ac3d8d957a4328fc78aec94e16}{failure}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c, \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&e)=0
+\begin{DoxyCompactList}\small\item\em Generates some sort of output for a failure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The interface that any output object must implement. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLineOutput_ad23a57ac3d8d957a4328fc78aec94e16}\label{classTCLAP_1_1CmdLineOutput_ad23a57ac3d8d957a4328fc78aec94e16}} 
+\index{TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}!failure@{failure}}
+\index{failure@{failure}!TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}}
+\doxysubsubsection{\texorpdfstring{failure()}{failure()}}
+{\footnotesize\ttfamily virtual void TCLAP\+::\+Cmd\+Line\+Output\+::failure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c,  }\item[{\mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generates some sort of output for a failure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+{\em e} & -\/ The \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} that caused the failure. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTCLAP_1_1ZshCompletionOutput_abcd0ba63a2ac7675d085877fc4d3e8cf}{TCLAP\+::\+Zsh\+Completion\+Output}}, \mbox{\hyperlink{classTCLAP_1_1StdOutput_a9afc267e012c3ac42c8b1afe01f98556}{TCLAP\+::\+Std\+Output}}, and \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_a5e97f659fa1ab3b060a31e8bd7a0a40e}{TCLAP\+::\+Doc\+Book\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLineOutput_a685b13db5bf6bbe5159e49169cd96bbe}\label{classTCLAP_1_1CmdLineOutput_a685b13db5bf6bbe5159e49169cd96bbe}} 
+\index{TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}!usage@{usage}}
+\index{usage@{usage}!TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}}
+\doxysubsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily virtual void TCLAP\+::\+Cmd\+Line\+Output\+::usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generates some sort of output for the USAGE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTCLAP_1_1ZshCompletionOutput_a3ea685b174fce7ddf2353129863b49d7}{TCLAP\+::\+Zsh\+Completion\+Output}}, \mbox{\hyperlink{classTCLAP_1_1StdOutput_aeb10eb400e0ee45f2cde689bef606b49}{TCLAP\+::\+Std\+Output}}, and \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}{TCLAP\+::\+Doc\+Book\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLineOutput_ae052fea473132482296de55edb3dd480}\label{classTCLAP_1_1CmdLineOutput_ae052fea473132482296de55edb3dd480}} 
+\index{TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}!version@{version}}
+\index{version@{version}!TCLAP::CmdLineOutput@{TCLAP::CmdLineOutput}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily virtual void TCLAP\+::\+Cmd\+Line\+Output\+::version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generates some sort of output for the version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTCLAP_1_1ZshCompletionOutput_a543e705918d769d3d6f4090c403ed0c9}{TCLAP\+::\+Zsh\+Completion\+Output}}, \mbox{\hyperlink{classTCLAP_1_1StdOutput_a768111a59af4753ac6e5ace3ec99482e}{TCLAP\+::\+Std\+Output}}, and \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_a3ccf7671dcae82aba5f0e91850ae25a4}{TCLAP\+::\+Doc\+Book\+Output}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Cmd\+Line\+Output.\+h\end{DoxyCompactItemize}

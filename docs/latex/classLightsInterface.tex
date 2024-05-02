@@ -1,0 +1,99 @@
+\hypertarget{classLightsInterface}{}\doxysection{Lights\+Interface Class Reference}
+\label{classLightsInterface}\index{LightsInterface@{LightsInterface}}
+
+
+The Light\+Interface, this could be abstracted to be inherited from a base device class if program was to be expanded.  
+
+
+
+
+{\ttfamily \#include $<$light\+\_\+interface.\+h$>$}
+
+
+
+Collaboration diagram for Lights\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLightsInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLightsInterface_af16f2ffa40a9e2cc0b7eea9542265574}{Lights\+Interface}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classConnectionManager}{Connection\+Manager}} $>$ \mbox{\hyperlink{classLightsInterface_a6ef2db9e4dd5a60762e702fe94ce4586}{connection\+Manager}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ \mbox{\hyperlink{classLight}{Light}} $>$$>$ \mbox{\hyperlink{classLightsInterface_a5982c3864e757909d0ae93d4c63bbe91}{data\+Store}})
+\begin{DoxyCompactList}\small\item\em Construct a new Lights Interface object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLightsInterface_abeaee83fff13c600bcc6e5473e7c0f65}{run}} (int hz)
+\begin{DoxyCompactList}\small\item\em The blocking function call to continuously update the system on changes to the server regarding lights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightsInterface_ad6872d31fad54fb35eac70e046a497de}\label{classLightsInterface_ad6872d31fad54fb35eac70e046a497de}} 
+void \mbox{\hyperlink{classLightsInterface_ad6872d31fad54fb35eac70e046a497de}{get\+Inital\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Get the Inital Status object to track state changes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLightsInterface_acc168fe45b4569eb4e57880acdf8763f}\label{classLightsInterface_acc168fe45b4569eb4e57880acdf8763f}} 
+void {\bfseries build\+Inital\+Device\+Objects} (json light, std\+::vector$<$ json $>$ \&formatted\+Intial\+Data)
+\item 
+\mbox{\Hypertarget{classLightsInterface_a23a29058b748c15157bc17b3826daac1}\label{classLightsInterface_a23a29058b748c15157bc17b3826daac1}} 
+std\+::optional$<$ \mbox{\hyperlink{classLight}{Light}} $>$ {\bfseries build\+Light\+Device} (json light)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLightsInterface_a6ef2db9e4dd5a60762e702fe94ce4586}\label{classLightsInterface_a6ef2db9e4dd5a60762e702fe94ce4586}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classConnectionManager}{Connection\+Manager}} $>$ \mbox{\hyperlink{classLightsInterface_a6ef2db9e4dd5a60762e702fe94ce4586}{connection\+Manager}}
+\begin{DoxyCompactList}\small\item\em Reference to the server client connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLightsInterface_a5982c3864e757909d0ae93d4c63bbe91}\label{classLightsInterface_a5982c3864e757909d0ae93d4c63bbe91}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ \mbox{\hyperlink{classLight}{Light}} $>$ $>$ \mbox{\hyperlink{classLightsInterface_a5982c3864e757909d0ae93d4c63bbe91}{data\+Store}}
+\begin{DoxyCompactList}\small\item\em Reference to the data\+Store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Light\+Interface, this could be abstracted to be inherited from a base device class if program was to be expanded. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLightsInterface_af16f2ffa40a9e2cc0b7eea9542265574}\label{classLightsInterface_af16f2ffa40a9e2cc0b7eea9542265574}} 
+\index{LightsInterface@{LightsInterface}!LightsInterface@{LightsInterface}}
+\index{LightsInterface@{LightsInterface}!LightsInterface@{LightsInterface}}
+\doxysubsubsection{\texorpdfstring{LightsInterface()}{LightsInterface()}}
+{\footnotesize\ttfamily Lights\+Interface\+::\+Lights\+Interface (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classConnectionManager}{Connection\+Manager}} $>$}]{connection\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ \mbox{\hyperlink{classLight}{Light}} $>$$>$}]{data\+Store }\end{DoxyParamCaption})}
+
+
+
+Construct a new Lights Interface object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+Manager} & The client server connection \\
+\hline
+{\em data\+Store} & The internal subsystem data storage and sharing mechanism \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLightsInterface_abeaee83fff13c600bcc6e5473e7c0f65}\label{classLightsInterface_abeaee83fff13c600bcc6e5473e7c0f65}} 
+\index{LightsInterface@{LightsInterface}!run@{run}}
+\index{run@{run}!LightsInterface@{LightsInterface}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Lights\+Interface\+::run (\begin{DoxyParamCaption}\item[{int}]{hz }\end{DoxyParamCaption})}
+
+
+
+The blocking function call to continuously update the system on changes to the server regarding lights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hz} & Rate the interface should query the server (-\/1 will be as fast as possible) Ex. 10 would be 10 times a second.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If more then one device interface is used this will need to be made to run on a thread and be non blocking to the main program 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{light__interface_8h}{light\+\_\+interface.\+h}}\item 
+/home/christian/\+Documents/joshai-\/challenge/src/light\+\_\+interface.\+cpp\end{DoxyCompactItemize}

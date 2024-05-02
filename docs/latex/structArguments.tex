@@ -1,0 +1,46 @@
+\hypertarget{structArguments}{}\doxysection{Arguments Struct Reference}
+\label{structArguments}\index{Arguments@{Arguments}}
+
+
+Steps 1) Read state of all lights 2) Condition data (brightness 0-\/255 to 0-\/100 etc) 3) Print out to consol json data 4) Monitor (pulling) for changes to the server 5) Update consol with changes 6) Handle errors (http fails, json fails) -\/$>$ inform and recover 7) Docs, Docs, Docs.  
+
+
+
+
+Collaboration diagram for Arguments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structArguments__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structArguments_a9906c5f56deb03e943b232cc9ddb8d20}\label{structArguments_a9906c5f56deb03e943b232cc9ddb8d20}} 
+std\+::string {\bfseries server\+Ip}
+\item 
+\mbox{\Hypertarget{structArguments_a000fe3e463e7daa43da03914a4b764a1}\label{structArguments_a000fe3e463e7daa43da03914a4b764a1}} 
+std\+::string {\bfseries port\+Number}
+\item 
+\mbox{\Hypertarget{structArguments_a6fb48d555198b40611b86862e1bd8f3a}\label{structArguments_a6fb48d555198b40611b86862e1bd8f3a}} 
+int {\bfseries poll\+Hz}
+\item 
+\mbox{\Hypertarget{structArguments_ae640d4f3e70b4343bb61dc97e81fd021}\label{structArguments_ae640d4f3e70b4343bb61dc97e81fd021}} 
+bool {\bfseries keep\+Alive}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Steps 1) Read state of all lights 2) Condition data (brightness 0-\/255 to 0-\/100 etc) 3) Print out to consol json data 4) Monitor (pulling) for changes to the server 5) Update consol with changes 6) Handle errors (http fails, json fails) -\/$>$ inform and recover 7) Docs, Docs, Docs. 
+
+Thoughts\+: Unit testing will be tricky as this would require a mock server in c++ or a guarantee that the simulator is running.
+
+Need to make sure all edge cases are handled (Maybe a basic event handler abstraction)
+
+ON/\+OFF events Brightness event ADD/\+Removal of light 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/src/main.\+cpp\end{DoxyCompactItemize}

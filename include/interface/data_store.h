@@ -4,10 +4,10 @@
  * @author Christian Prather
  * @brief This is the central mechanism for data storage across the classes used in the program. Its
  * job is to handle the validity and comparison of the data. It also gives all sections of the code
- * a cental place to access data so they dont all need a dependency on the network connection. If
+ * a central place to access data so they dont all need a dependency on the network connection. If
  * this project were to be scaled this would also allow for multiple device types. This would mean a
  * data store for each device which is not ideal but for this application is fine. As scale the data
- * should be templatized but the data manager (this) should not
+ * should be templatized but the data manager (this) should not.
  * @version 0.1
  * @date 2024-05-01
  *

@@ -1,0 +1,38 @@
+\hypertarget{classTCLAP_1_1ExitException}{}\doxysection{TCLAP\+::Exit\+Exception Class Reference}
+\label{classTCLAP_1_1ExitException}\index{TCLAP::ExitException@{TCLAP::ExitException}}
+
+
+Thrown when TCLAP thinks the program should exit.  
+
+
+
+
+{\ttfamily \#include $<$Arg\+Exception.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ExitException_a03a48ed9da416c8261edbd9cbbf85b27}\label{classTCLAP_1_1ExitException_a03a48ed9da416c8261edbd9cbbf85b27}} 
+{\bfseries Exit\+Exception} (int estat)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ExitException_a976a098bb1cfa75bde36a4195ce1f59c}\label{classTCLAP_1_1ExitException_a976a098bb1cfa75bde36a4195ce1f59c}} 
+int {\bfseries get\+Exit\+Status} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ExitException_ad1e2fb2092d0e3470ff837d6e6f84f89}\label{classTCLAP_1_1ExitException_ad1e2fb2092d0e3470ff837d6e6f84f89}} 
+int {\bfseries \+\_\+estat}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thrown when TCLAP thinks the program should exit. 
+
+For example after parse error this exception will be thrown (and normally caught). This allows any resource to be clened properly before exit.
+
+If exception handling is disabled (\mbox{\hyperlink{classTCLAP_1_1CmdLine_aa02055d8f4864bfa9b505e2d26bbbd87}{Cmd\+Line\+::set\+Exception\+Handling}}), this exception will propagate to the call site, allowing the program to catch it and avoid program termination, or do it\textquotesingle{}s own cleanup. See for example, \href{https://sourceforge.net/p/tclap/bugs/29}{\texttt{ https\+://sourceforge.\+net/p/tclap/bugs/29}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Arg\+Exception.\+h\end{DoxyCompactItemize}

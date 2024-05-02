@@ -1,0 +1,7 @@
+<map id="TCLAP::SpecificationException" name="TCLAP::SpecificationException">
+<area shape="rect" id="node1" title="Thrown from Arg and CmdLine when an Arg is improperly specified, e.g." alt="" coords="5,291,225,317"/>
+<area shape="rect" id="node2" href="$classTCLAP_1_1ArgException.html" title="A simple class that defines and argument exception." alt="" coords="36,215,195,241"/>
+<area shape="rect" id="node3" title=" " alt="" coords="37,96,151,123"/>
+<area shape="rect" id="node4" title=" " alt="" coords="176,96,263,123"/>
+<area shape="rect" id="node5" title=" " alt="" coords="150,5,289,47"/>
+</map>

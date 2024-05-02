@@ -1,0 +1,28 @@
+\hypertarget{structServerResponse}{}\doxysection{Server\+Response Struct Reference}
+\label{structServerResponse}\index{ServerResponse@{ServerResponse}}
+
+
+A unified data structure to capture data and status coming back from the server.  
+
+
+
+
+{\ttfamily \#include $<$connection\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structServerResponse_a6f91e57f8f8cc5ebecc9f7caa9536dd9}\label{structServerResponse_a6f91e57f8f8cc5ebecc9f7caa9536dd9}} 
+int \mbox{\hyperlink{structServerResponse_a6f91e57f8f8cc5ebecc9f7caa9536dd9}{return\+Code}}
+\begin{DoxyCompactList}\small\item\em Status code, matching typical http status codes (200 = OK), (404 = error) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structServerResponse_af9c95d5d7737af0333d686bf509fd72a}\label{structServerResponse_af9c95d5d7737af0333d686bf509fd72a}} 
+json \mbox{\hyperlink{structServerResponse_af9c95d5d7737af0333d686bf509fd72a}{body}}
+\begin{DoxyCompactList}\small\item\em Response from server in json format, for http this is what comes over the wire for other protocols the data will need to be converted to pack it in json format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A unified data structure to capture data and status coming back from the server. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{connection__manager_8h}{connection\+\_\+manager.\+h}}\end{DoxyCompactItemize}

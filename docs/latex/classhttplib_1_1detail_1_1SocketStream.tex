@@ -1,0 +1,87 @@
+\hypertarget{classhttplib_1_1detail_1_1SocketStream}{}\doxysection{httplib\+::detail\+::Socket\+Stream Class Reference}
+\label{classhttplib_1_1detail_1_1SocketStream}\index{httplib::detail::SocketStream@{httplib::detail::SocketStream}}
+
+
+Inheritance diagram for httplib\+::detail\+::Socket\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classhttplib_1_1detail_1_1SocketStream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::detail\+::Socket\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classhttplib_1_1detail_1_1SocketStream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a47ee2245a68f78d1331c429d1b8cff14}\label{classhttplib_1_1detail_1_1SocketStream_a47ee2245a68f78d1331c429d1b8cff14}} 
+{\bfseries Socket\+Stream} (socket\+\_\+t sock, time\+\_\+t read\+\_\+timeout\+\_\+sec, time\+\_\+t read\+\_\+timeout\+\_\+usec, time\+\_\+t write\+\_\+timeout\+\_\+sec, time\+\_\+t write\+\_\+timeout\+\_\+usec)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a54ef15b31ba398e33086574d412fb316}\label{classhttplib_1_1detail_1_1SocketStream_a54ef15b31ba398e33086574d412fb316}} 
+bool {\bfseries is\+\_\+readable} () const override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_aa5bf41c972f307030f34de1c7dbb25d9}\label{classhttplib_1_1detail_1_1SocketStream_aa5bf41c972f307030f34de1c7dbb25d9}} 
+bool {\bfseries is\+\_\+writable} () const override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a7fff1278536273efeb9c0e9adad57d62}\label{classhttplib_1_1detail_1_1SocketStream_a7fff1278536273efeb9c0e9adad57d62}} 
+ssize\+\_\+t {\bfseries read} (char $\ast$ptr, size\+\_\+t size) override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a5758d225d89517db2a637fac308f041a}\label{classhttplib_1_1detail_1_1SocketStream_a5758d225d89517db2a637fac308f041a}} 
+ssize\+\_\+t {\bfseries write} (const char $\ast$ptr, size\+\_\+t size) override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a10edcbf718672c3be447eaffa5bb25df}\label{classhttplib_1_1detail_1_1SocketStream_a10edcbf718672c3be447eaffa5bb25df}} 
+void {\bfseries get\+\_\+remote\+\_\+ip\+\_\+and\+\_\+port} (std\+::string \&ip, int \&port) const override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a79225a858c34f7084e2db0015e55945a}\label{classhttplib_1_1detail_1_1SocketStream_a79225a858c34f7084e2db0015e55945a}} 
+void {\bfseries get\+\_\+local\+\_\+ip\+\_\+and\+\_\+port} (std\+::string \&ip, int \&port) const override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a1de284778b5558fbd7be59632bbaa85e}\label{classhttplib_1_1detail_1_1SocketStream_a1de284778b5558fbd7be59632bbaa85e}} 
+socket\+\_\+t {\bfseries socket} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_aab1e9c555082de67f646cb3c303d6f91}\label{classhttplib_1_1detail_1_1SocketStream_aab1e9c555082de67f646cb3c303d6f91}} 
+socket\+\_\+t {\bfseries sock\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a8d3d29cab4b58080b478284260506982}\label{classhttplib_1_1detail_1_1SocketStream_a8d3d29cab4b58080b478284260506982}} 
+time\+\_\+t {\bfseries read\+\_\+timeout\+\_\+sec\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a896b2836d8c0494717d673c20445bb21}\label{classhttplib_1_1detail_1_1SocketStream_a896b2836d8c0494717d673c20445bb21}} 
+time\+\_\+t {\bfseries read\+\_\+timeout\+\_\+usec\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a1d8bafc8e2c27f10e31978388b8178f8}\label{classhttplib_1_1detail_1_1SocketStream_a1d8bafc8e2c27f10e31978388b8178f8}} 
+time\+\_\+t {\bfseries write\+\_\+timeout\+\_\+sec\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a8d2381d5b4b2421a96c5a9ea84c80ae0}\label{classhttplib_1_1detail_1_1SocketStream_a8d2381d5b4b2421a96c5a9ea84c80ae0}} 
+time\+\_\+t {\bfseries write\+\_\+timeout\+\_\+usec\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_ae8c21953eaa59b1d232c8ef955ae39dc}\label{classhttplib_1_1detail_1_1SocketStream_ae8c21953eaa59b1d232c8ef955ae39dc}} 
+std\+::vector$<$ char $>$ {\bfseries read\+\_\+buff\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a6a2476cae3217cf91f3ce921ec2af154}\label{classhttplib_1_1detail_1_1SocketStream_a6a2476cae3217cf91f3ce921ec2af154}} 
+size\+\_\+t {\bfseries read\+\_\+buff\+\_\+off\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a6e87b6321db2c90e9816742d57c56c46}\label{classhttplib_1_1detail_1_1SocketStream_a6e87b6321db2c90e9816742d57c56c46}} 
+size\+\_\+t {\bfseries read\+\_\+buff\+\_\+content\+\_\+size\+\_\+} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1SocketStream_a84c87f50baf05b194d96f88daedd4e14}\label{classhttplib_1_1detail_1_1SocketStream_a84c87f50baf05b194d96f88daedd4e14}} 
+static const size\+\_\+t {\bfseries read\+\_\+buff\+\_\+size\+\_\+} = 1024l $\ast$ 4
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

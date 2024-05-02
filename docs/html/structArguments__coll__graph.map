@@ -1,0 +1,5 @@
+<map id="Arguments" name="Arguments">
+<area shape="rect" id="node1" title="Steps 1) Read state of all lights 2) Condition data (brightness 0&#45;255 to 0&#45;100 etc) 3) Print out to c..." alt="" coords="28,200,121,227"/>
+<area shape="rect" id="node2" title=" " alt="" coords="31,96,118,123"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,144,47"/>
+</map>

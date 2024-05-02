@@ -1,0 +1,37 @@
+\hypertarget{classhttplib_1_1ContentReader}{}\doxysection{httplib\+::Content\+Reader Class Reference}
+\label{classhttplib_1_1ContentReader}\index{httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}\label{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}} 
+using {\bfseries Reader} = std\+::function$<$ bool(Content\+Receiver receiver)$>$
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a6239248caa23f835547b77fded674db6}\label{classhttplib_1_1ContentReader_a6239248caa23f835547b77fded674db6}} 
+using {\bfseries Multipart\+Reader} = std\+::function$<$ bool(Multipart\+Content\+Header header, Content\+Receiver receiver)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_ad236fd49b84c9af66001deebe9d41e55}\label{classhttplib_1_1ContentReader_ad236fd49b84c9af66001deebe9d41e55}} 
+{\bfseries Content\+Reader} (Reader reader, Multipart\+Reader multipart\+\_\+reader)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a596c6d863a6de135905120f180490363}\label{classhttplib_1_1ContentReader_a596c6d863a6de135905120f180490363}} 
+bool {\bfseries operator()} (Multipart\+Content\+Header header, Content\+Receiver receiver) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_aa6f3ec4f7b8669f1f1249a5fba969d5a}\label{classhttplib_1_1ContentReader_aa6f3ec4f7b8669f1f1249a5fba969d5a}} 
+bool {\bfseries operator()} (Content\+Receiver receiver) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a1fb51ae3a8bc275f1ef81ab01e85d86b}\label{classhttplib_1_1ContentReader_a1fb51ae3a8bc275f1ef81ab01e85d86b}} 
+Reader {\bfseries reader\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_af47ff64635539ffefa4c0ffb46b0e140}\label{classhttplib_1_1ContentReader_af47ff64635539ffefa4c0ffb46b0e140}} 
+Multipart\+Reader {\bfseries multipart\+\_\+reader\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

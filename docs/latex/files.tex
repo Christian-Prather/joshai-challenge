@@ -1,0 +1,34 @@
+\doxysection{File List}
+Here is a list of all documented files with brief descriptions\+:\begin{DoxyCompactList}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{connection__manager_8h}{connection\+\_\+manager.\+h}} \\*This is the abstraction / wrapper over the client server connection needed to get new data. This is used so that the underlying connection protocol / library can be changed and not break the rest of the system. Examples of different methods one might use are g\+RPC, websocket, MQTT, or ROS. To swap this classes API would only need to be updated to the new call / library }{\pageref{connection__manager_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{data__store_8h}{data\+\_\+store.\+h}} \\*This is the central mechanism for data storage across the classes used in the program. Its job is to handle the validity and comparison of the data. It also gives all sections of the code a central place to access data so they dont all need a dependency on the network connection. If this project were to be scaled this would also allow for multiple device types. This would mean a data store for each device which is not ideal but for this application is fine. As scale the data should be templatized but the data manager (this) should not }{\pageref{data__store_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{light_8h}{light.\+h}} \\*This file contains a class structure for light devices and their relative data }{\pageref{light_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{light__interface_8h}{light\+\_\+interface.\+h}} \\*The device specific interface. Used to abstract away device specifics (in this case lights) such as what request errors mean and how to structure / display specific data }{\pageref{light__interface_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/{\bfseries httplib.\+h} }{\pageref{httplib_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/nlohmann/{\bfseries json.\+hpp} }{\pageref{json_8hpp}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Arg.\+h} }{\pageref{Arg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Arg\+Exception.\+h} }{\pageref{ArgException_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Arg\+Traits.\+h} }{\pageref{ArgTraits_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Cmd\+Line.\+h} }{\pageref{CmdLine_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Cmd\+Line\+Interface.\+h} }{\pageref{CmdLineInterface_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Cmd\+Line\+Output.\+h} }{\pageref{CmdLineOutput_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Constraint.\+h} }{\pageref{Constraint_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Doc\+Book\+Output.\+h} }{\pageref{DocBookOutput_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Help\+Visitor.\+h} }{\pageref{HelpVisitor_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Ignore\+Rest\+Visitor.\+h} }{\pageref{IgnoreRestVisitor_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Multi\+Arg.\+h} }{\pageref{MultiArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Multi\+Switch\+Arg.\+h} }{\pageref{MultiSwitchArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Optional\+Unlabeled\+Tracker.\+h} }{\pageref{OptionalUnlabeledTracker_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries sstream.\+h} }{\pageref{sstream_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Standard\+Traits.\+h} }{\pageref{StandardTraits_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Std\+Output.\+h} }{\pageref{StdOutput_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Switch\+Arg.\+h} }{\pageref{SwitchArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Unlabeled\+Multi\+Arg.\+h} }{\pageref{UnlabeledMultiArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Unlabeled\+Value\+Arg.\+h} }{\pageref{UnlabeledValueArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Value\+Arg.\+h} }{\pageref{ValueArg_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Values\+Constraint.\+h} }{\pageref{ValuesConstraint_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Version\+Visitor.\+h} }{\pageref{VersionVisitor_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Visitor.\+h} }{\pageref{Visitor_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Xor\+Handler.\+h} }{\pageref{XorHandler_8h}}{}
+\item\contentsline{section}{/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/{\bfseries Zsh\+Completion\+Output.\+h} }{\pageref{ZshCompletionOutput_8h}}{}
+\end{DoxyCompactList}

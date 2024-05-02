@@ -1,0 +1,5 @@
+<map id="httplib::Stream" name="httplib::Stream">
+<area shape="rect" id="node1" title=" " alt="" coords="163,5,281,32"/>
+<area shape="rect" id="node2" href="$classhttplib_1_1detail_1_1BufferStream.html" title=" " alt="" coords="5,80,209,107"/>
+<area shape="rect" id="node3" href="$classhttplib_1_1detail_1_1SocketStream.html" title=" " alt="" coords="233,80,440,107"/>
+</map>

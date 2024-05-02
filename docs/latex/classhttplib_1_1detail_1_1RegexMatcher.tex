@@ -1,0 +1,56 @@
+\hypertarget{classhttplib_1_1detail_1_1RegexMatcher}{}\doxysection{httplib\+::detail\+::Regex\+Matcher Class Reference}
+\label{classhttplib_1_1detail_1_1RegexMatcher}\index{httplib::detail::RegexMatcher@{httplib::detail::RegexMatcher}}
+
+
+Performs std\+::regex\+\_\+match on request path and stores the result in Request\+::matches.  
+
+
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::detail\+::Regex\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classhttplib_1_1detail_1_1RegexMatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::detail\+::Regex\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classhttplib_1_1detail_1_1RegexMatcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1RegexMatcher_afb07c1bd6712a47bdef65fe392ed043d}\label{classhttplib_1_1detail_1_1RegexMatcher_afb07c1bd6712a47bdef65fe392ed043d}} 
+{\bfseries Regex\+Matcher} (const std\+::string \&pattern)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1RegexMatcher_aef3f65a7264ead1b47b310d214f16666}\label{classhttplib_1_1detail_1_1RegexMatcher_aef3f65a7264ead1b47b310d214f16666}} 
+bool {\bfseries match} (\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&request) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1RegexMatcher_a272b70b0144daad0da65332fc7ac9e3c}\label{classhttplib_1_1detail_1_1RegexMatcher_a272b70b0144daad0da65332fc7ac9e3c}} 
+std\+::regex {\bfseries regex\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs std\+::regex\+\_\+match on request path and stores the result in Request\+::matches. 
+
+Note that regex match is performed directly on the whole request. This means that wildcard patterns may match multiple path segments with /\+: \char`\"{}/begin/(.$\ast$)/end\char`\"{} will match both \char`\"{}/begin/middle/end\char`\"{} and \char`\"{}/begin/1/2/end\char`\"{}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

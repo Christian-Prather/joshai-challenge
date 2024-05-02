@@ -1,0 +1,5 @@
+<map id="/home/christian/Documents/joshai&#45;challenge/include/interface/light.h" name="/home/christian/Documents/joshai&#45;challenge/include/interface/light.h">
+<area shape="rect" id="node1" title="This file contains a class structure for light devices and their relative data." alt="" coords="5,5,207,61"/>
+<area shape="rect" id="node2" href="$data__store_8h.html" title="This is the central mechanism for data storage across the classes used in the program...." alt="" coords="5,109,207,165"/>
+<area shape="rect" id="node3" href="$light__interface_8h.html" title="The device specific interface. Used to abstract away device specifics (in this case lights) such as w..." alt="" coords="5,213,207,269"/>
+</map>

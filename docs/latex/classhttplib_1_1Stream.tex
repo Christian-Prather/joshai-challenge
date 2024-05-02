@@ -1,0 +1,50 @@
+\hypertarget{classhttplib_1_1Stream}{}\doxysection{httplib\+::Stream Class Reference}
+\label{classhttplib_1_1Stream}\index{httplib::Stream@{httplib::Stream}}
+
+
+Inheritance diagram for httplib\+::Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhttplib_1_1Stream__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_af0a78453c54817f8fc0de91f8b02c12c}\label{classhttplib_1_1Stream_af0a78453c54817f8fc0de91f8b02c12c}} 
+virtual bool {\bfseries is\+\_\+readable} () const =0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_ab10c55e43ccf0146c4d142e53a58a831}\label{classhttplib_1_1Stream_ab10c55e43ccf0146c4d142e53a58a831}} 
+virtual bool {\bfseries is\+\_\+writable} () const =0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a58adfc27d0672f6a2f293168757861b2}\label{classhttplib_1_1Stream_a58adfc27d0672f6a2f293168757861b2}} 
+virtual ssize\+\_\+t {\bfseries read} (char $\ast$ptr, size\+\_\+t size)=0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a4b94583ae90065c9e4e33a7752d9976f}\label{classhttplib_1_1Stream_a4b94583ae90065c9e4e33a7752d9976f}} 
+virtual ssize\+\_\+t {\bfseries write} (const char $\ast$ptr, size\+\_\+t size)=0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a69c4c8a58c9e943fea94f01e6b7dd5ca}\label{classhttplib_1_1Stream_a69c4c8a58c9e943fea94f01e6b7dd5ca}} 
+virtual void {\bfseries get\+\_\+remote\+\_\+ip\+\_\+and\+\_\+port} (std\+::string \&ip, int \&port) const =0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a8b16f07c7f00c5eb9c67f55f77d4e508}\label{classhttplib_1_1Stream_a8b16f07c7f00c5eb9c67f55f77d4e508}} 
+virtual void {\bfseries get\+\_\+local\+\_\+ip\+\_\+and\+\_\+port} (std\+::string \&ip, int \&port) const =0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_ad2ea435dea23ee5f89b0792f4cb2d742}\label{classhttplib_1_1Stream_ad2ea435dea23ee5f89b0792f4cb2d742}} 
+virtual socket\+\_\+t {\bfseries socket} () const =0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a9892f60a65f59412ace397b7b6c4c93b}\label{classhttplib_1_1Stream_a9892f60a65f59412ace397b7b6c4c93b}} 
+{\footnotesize template$<$typename... Args$>$ }\\ssize\+\_\+t {\bfseries write\+\_\+format} (const char $\ast$fmt, const Args \&...args)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a1f8218941e7dac2dd5795e89e6e9607f}\label{classhttplib_1_1Stream_a1f8218941e7dac2dd5795e89e6e9607f}} 
+ssize\+\_\+t {\bfseries write} (const char $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Stream_a81b7ddb3a4c73f8e2fe1b3887f7346c9}\label{classhttplib_1_1Stream_a81b7ddb3a4c73f8e2fe1b3887f7346c9}} 
+ssize\+\_\+t {\bfseries write} (const std\+::string \&s)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}
