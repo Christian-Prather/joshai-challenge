@@ -1,0 +1,137 @@
+\hypertarget{classLight}{}\doxysection{Light Class Reference}
+\label{classLight}\index{Light@{Light}}
+
+
+\mbox{\hyperlink{classLight}{Light}} specific device.  
+
+
+
+
+{\ttfamily \#include $<$light.\+h$>$}
+
+
+
+Collaboration diagram for Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classLight__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLight_aea78a22b4d81f7751960c405121368b3}{Light}} (uint8\+\_\+t brightness, std\+::string id, std\+::string name, bool on, std\+::string room)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classLight}{Light}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLight_ad9853d4787ff706811c8d570e72c32d4}{generate\+Hash}} ()
+\begin{DoxyCompactList}\small\item\em Generates a hash based on all the member variable values at time of contraction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLight_a292f24cf416a23df1d1f6a356dbe31b7}{convert\+Brightness}} (int value)
+\begin{DoxyCompactList}\small\item\em Map the 0-\/255 pwm brightness values to a percent 0-\/100. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLight_aa28e051e5d9fc7362c8cdea76ec32cc9}{parse\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Handle editing / conditioning the device data to match what is usable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLight_aee343820a0ef67a1c2628d6777da94b4}\label{classLight_aee343820a0ef67a1c2628d6777da94b4}} 
+uint8\+\_\+t {\bfseries brightness}
+\item 
+\mbox{\Hypertarget{classLight_a3aede2c7bf6a2e7596e3b93735470b6d}\label{classLight_a3aede2c7bf6a2e7596e3b93735470b6d}} 
+std\+::string {\bfseries id}
+\item 
+\mbox{\Hypertarget{classLight_aed2e518d1e739c50c31ae77a865f51ed}\label{classLight_aed2e518d1e739c50c31ae77a865f51ed}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{classLight_a37ee0b241dbdaff4a13cc269de33a8bf}\label{classLight_a37ee0b241dbdaff4a13cc269de33a8bf}} 
+bool {\bfseries on}
+\item 
+\mbox{\Hypertarget{classLight_af4e5396b720a8f7fd78edce439c37a49}\label{classLight_af4e5396b720a8f7fd78edce439c37a49}} 
+std\+::string {\bfseries room}
+\item 
+\mbox{\Hypertarget{classLight_a90f4ccb40a42710e6bde08332c1fa587}\label{classLight_a90f4ccb40a42710e6bde08332c1fa587}} 
+std\+::hash$<$ std\+::string $>$ {\bfseries hasher}
+\item 
+\mbox{\Hypertarget{classLight_ab1e40477adc90ef70520031729570e98}\label{classLight_ab1e40477adc90ef70520031729570e98}} 
+std\+::string {\bfseries hash\+String}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classLight}{Light}} specific device. 
+
+\begin{DoxyNote}{Note}
+This could be abstracted to inherit from a device parent class 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLight_aea78a22b4d81f7751960c405121368b3}\label{classLight_aea78a22b4d81f7751960c405121368b3}} 
+\index{Light@{Light}!Light@{Light}}
+\index{Light@{Light}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily Light\+::\+Light (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{brightness,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{name,  }\item[{bool}]{on,  }\item[{std\+::string}]{room }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classLight}{Light}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brightness} & int 0-\/255 brightness from server \\
+\hline
+{\em id} & string unique Id of device \\
+\hline
+{\em name} & string name given to device by user \\
+\hline
+{\em on} & Bool true = on \\
+\hline
+{\em room} & string what room the device is in \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLight_a292f24cf416a23df1d1f6a356dbe31b7}\label{classLight_a292f24cf416a23df1d1f6a356dbe31b7}} 
+\index{Light@{Light}!convertBrightness@{convertBrightness}}
+\index{convertBrightness@{convertBrightness}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{convertBrightness()}{convertBrightness()}}
+{\footnotesize\ttfamily int Light\+::convert\+Brightness (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Map the 0-\/255 pwm brightness values to a percent 0-\/100. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value (0-\/255) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int output percentage (0-\/100) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLight_ad9853d4787ff706811c8d570e72c32d4}\label{classLight_ad9853d4787ff706811c8d570e72c32d4}} 
+\index{Light@{Light}!generateHash@{generateHash}}
+\index{generateHash@{generateHash}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{generateHash()}{generateHash()}}
+{\footnotesize\ttfamily void Light\+::generate\+Hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a hash based on all the member variable values at time of contraction. 
+
+Used to compare if elements have changed efficiently later on in the program \mbox{\Hypertarget{classLight_aa28e051e5d9fc7362c8cdea76ec32cc9}\label{classLight_aa28e051e5d9fc7362c8cdea76ec32cc9}} 
+\index{Light@{Light}!parseData@{parseData}}
+\index{parseData@{parseData}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{parseData()}{parseData()}}
+{\footnotesize\ttfamily void Light\+::parse\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handle editing / conditioning the device data to match what is usable. 
+
+For light device this is only the brightness level. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{light_8h}{light.\+h}}\item 
+/home/christian/\+Documents/joshai-\/challenge/src/light.\+cpp\end{DoxyCompactItemize}

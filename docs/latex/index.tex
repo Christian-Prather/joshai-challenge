@@ -1,0 +1,91 @@
+\label{index_md__home_christian_Documents_joshai_challenge_README}%
+\Hypertarget{index_md__home_christian_Documents_joshai_challenge_README}%
+ \doxysection*{Overview}
+
+This is a basic cli written to interact with the Josh.\+ai lights server API. Its basic function is a one way communication and data display application. When ran it will print all info on current lights seen by the server as well as notify the consol of any changes (updates to existing light, removal of a light, addition of a light).
+
+\doxysubsection*{Code}
+
+\doxysubsubsection*{Execution Instructions}
+
+To run the program you may either build the executable from source (see Build Instructions below) or if running on a compatible system you may download a bin from the release page.
+
+Once you have a bin you may run it with the command {\ttfamily ./josh-\/ai-\/interface}
+
+This will run the cli with default arguments. To get a list / help of all available arguments run.
+
+{\ttfamily ./josh-\/ai-\/interface -\/h}
+
+You should get output similar to the below
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{USAGE:}
+\DoxyCodeLine{}
+\DoxyCodeLine{   ./josh-\/ai-\/interface  [-\/k] [-\/r <int>] [-\/p <string>] [-\/a <string>] [-\/-\/]}
+\DoxyCodeLine{                        [-\/-\/version] [-\/h]}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{Where:}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/k,  -\/-\/keep-\/alive}
+\DoxyCodeLine{     Make connections with keepAlive header, defaults to true}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/r <int>,  -\/-\/rate <int>}
+\DoxyCodeLine{     Rate for client to poll server for updates. (Not a guarantee, if}
+\DoxyCodeLine{     client can not keep up)}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/p <string>,  -\/-\/port <string>}
+\DoxyCodeLine{     Port number.}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/a <string>,  -\/-\/server-\/address <string>}
+\DoxyCodeLine{     The server address.}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/-\/,  -\/-\/ignore\_rest}
+\DoxyCodeLine{     Ignores the rest of the labeled arguments following this flag.}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/-\/version}
+\DoxyCodeLine{     Displays version information and exits.}
+\DoxyCodeLine{}
+\DoxyCodeLine{   -\/h,  -\/-\/help}
+\DoxyCodeLine{     Displays usage information and exits.}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{   Josh.ai CLI}
+
+\end{DoxyCode}
+
+
+By default the cli looks for a server at address {\ttfamily localhost\+:8080}, will poll as fast as your system allows, and will use the keep\+Alive http header.
+
+\doxysubsubsection*{Build Instructions}
+
+{\bfseries{The project is built with C++17 and CMake, and has only been tested against Ubuntu 22.\+04}} In order to build follow the instructions below.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1. git clone git@github.com:Christian-\/Prather/joshai-\/challenge.git}
+\DoxyCodeLine{2. cd joshai-\/challenge}
+\DoxyCodeLine{3. mkdir build}
+\DoxyCodeLine{4. cd build}
+\DoxyCodeLine{5. cmake ..}
+\DoxyCodeLine{6. make -\/jn (n = number of threads)}
+
+\end{DoxyCode}
+
+
+This will make a binary in the build folder called {\ttfamily josh-\/ai-\/interface}
+
+Run it with {\ttfamily ./josh-\/ai-\/interface}
+
+\doxysubsubsection*{Install}
+
+If you wish to install the program system wide you mae run {\ttfamily sudo make install} which will place the bin in your binary folder.
+
+\doxysubsection*{Documentation}
+
+\doxysubsubsection*{Building API docs}
+
+All code here is documented with Doxygen. In order to build the docs you must first have Doxygen and graphviz installed. It is available through the debian/ubuntu repositories. After this, cd to the {\ttfamily docs/} directory, and run {\ttfamily doxygen}. This should generate both HTML and La\+TeX output. To view the HTML, simply navigate to \href{file:///path/to/joshai-challenge/docs/html/index.html}{\texttt{ file\+:///path/to/joshai-\/challenge/docs/html/index.\+html}} in your web browser of choice.
+
+\doxysubsubsection*{Module Decomposition}

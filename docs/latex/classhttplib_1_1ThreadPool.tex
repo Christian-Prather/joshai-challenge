@@ -1,0 +1,74 @@
+\hypertarget{classhttplib_1_1ThreadPool}{}\doxysection{httplib\+::Thread\+Pool Class Reference}
+\label{classhttplib_1_1ThreadPool}\index{httplib::ThreadPool@{httplib::ThreadPool}}
+
+
+Inheritance diagram for httplib\+::Thread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classhttplib_1_1ThreadPool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::Thread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhttplib_1_1ThreadPool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1ThreadPool_1_1worker}{worker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a37b2f9086f6a97b1f96bcc08d1562e8b}\label{classhttplib_1_1ThreadPool_a37b2f9086f6a97b1f96bcc08d1562e8b}} 
+{\bfseries Thread\+Pool} (size\+\_\+t n, size\+\_\+t mqr=0)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_aac78a365c5d7910e7367a83d21369ed2}\label{classhttplib_1_1ThreadPool_aac78a365c5d7910e7367a83d21369ed2}} 
+{\bfseries Thread\+Pool} (const \mbox{\hyperlink{classhttplib_1_1ThreadPool}{Thread\+Pool}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}\label{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}} 
+bool {\bfseries enqueue} (std\+::function$<$ void()$>$ fn) override
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}\label{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}} 
+void {\bfseries shutdown} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_ab387526d81649547c8cc80e8a2ed5262}\label{classhttplib_1_1ThreadPool_ab387526d81649547c8cc80e8a2ed5262}} 
+std\+::vector$<$ std\+::thread $>$ {\bfseries threads\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a4d0f69e884aa51fb069949ab47cc3319}\label{classhttplib_1_1ThreadPool_a4d0f69e884aa51fb069949ab47cc3319}} 
+std\+::list$<$ std\+::function$<$ void()$>$ $>$ {\bfseries jobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_ad147150e368881c6c813434e9e509cff}\label{classhttplib_1_1ThreadPool_ad147150e368881c6c813434e9e509cff}} 
+bool {\bfseries shutdown\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_ac83c54ec41889eb34f0a38a5ce5bf4a5}\label{classhttplib_1_1ThreadPool_ac83c54ec41889eb34f0a38a5ce5bf4a5}} 
+size\+\_\+t {\bfseries max\+\_\+queued\+\_\+requests\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a047e7cd75e07a81c51f1c9376d5dd42f}\label{classhttplib_1_1ThreadPool_a047e7cd75e07a81c51f1c9376d5dd42f}} 
+std\+::condition\+\_\+variable {\bfseries cond\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_af95720a7fe4254a7fca6b15451ed5d1e}\label{classhttplib_1_1ThreadPool_af95720a7fe4254a7fca6b15451ed5d1e}} 
+std\+::mutex {\bfseries mutex\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a145c4e203b787f9b561489eb2032edb3}\label{classhttplib_1_1ThreadPool_a145c4e203b787f9b561489eb2032edb3}} 
+struct {\bfseries worker}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

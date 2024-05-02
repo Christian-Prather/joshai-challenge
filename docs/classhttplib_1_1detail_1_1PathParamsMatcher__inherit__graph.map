@@ -1,0 +1,4 @@
+<map id="httplib::detail::PathParamsMatcher" name="httplib::detail::PathParamsMatcher">
+<area shape="rect" id="node1" title="Captures parameters in request path and stores them in Request::path_params." alt="" coords="9,80,204,121"/>
+<area shape="rect" id="node2" href="$classhttplib_1_1detail_1_1MatcherBase.html" title=" " alt="" coords="5,5,208,32"/>
+</map>

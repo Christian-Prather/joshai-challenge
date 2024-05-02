@@ -4,7 +4,7 @@
  * @file connection_manager.h
  * @author Christian Prather
  * @brief This is the abstraction / wrapper over the client server connection needed to get new
- * data. This is used so that the undelying connection protocol / library can be changed and not
+ * data. This is used so that the underlying connection protocol / library can be changed and not
  * break the rest of the system. Examples of different methods one might use are gRPC, websocket,
  * MQTT, or ROS. To swap this classes API would only need to be updated to the new call / library.
  * @version 0.1

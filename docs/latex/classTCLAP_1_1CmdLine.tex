@@ -1,0 +1,454 @@
+\hypertarget{classTCLAP_1_1CmdLine}{}\doxysection{TCLAP\+::Cmd\+Line Class Reference}
+\label{classTCLAP_1_1CmdLine}\index{TCLAP::CmdLine@{TCLAP::CmdLine}}
+
+
+The base class that manages the command line definition and passes along the parsing to the appropriate \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} classes.  
+
+
+
+
+{\ttfamily \#include $<$Cmd\+Line.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Cmd\+Line\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classTCLAP_1_1CmdLine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Cmd\+Line\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1CmdLine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1CmdLine_a6ee7bc32fd24e6e6f966b32f03df9124}{Cmd\+Line}} (const std\+::string \&message, const char delimiter=\textquotesingle{} \textquotesingle{}, const std\+::string \&version=\char`\"{}none\char`\"{}, bool help\+And\+Version=true)
+\begin{DoxyCompactList}\small\item\em Command line constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a8a7bddba32c3d96e2a01e4c8e160e6fa}\label{classTCLAP_1_1CmdLine_a8a7bddba32c3d96e2a01e4c8e160e6fa}} 
+virtual \mbox{\hyperlink{classTCLAP_1_1CmdLine_a8a7bddba32c3d96e2a01e4c8e160e6fa}{$\sim$\+Cmd\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Deletes any resources allocated by a \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a94c511d4735ad9b8c97edaa3827f8bbf}{add}} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&a)
+\begin{DoxyCompactList}\small\item\em Adds an argument to the list of arguments to be parsed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_ab8a08e8f4d3ca7709c85416f76e805a3}{add}} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em An alternative add. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_afbaa2071d0c3276b383089acabdc0dd2}{xor\+Add}} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&a, \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&b)
+\begin{DoxyCompactList}\small\item\em Add two Args that will be xor\textquotesingle{}d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a7f45e0ca068c52d2732cd9e7b354c0ca}{xor\+Add}} (const std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&xors)
+\begin{DoxyCompactList}\small\item\em Add a list of Args that will be xor\textquotesingle{}d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_acb07daf5a1370c176a7b4a6e4119fe6e}{parse}} (int argc, const char $\ast$const $\ast$argv)
+\begin{DoxyCompactList}\small\item\em Parses the command line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a712c3edf86aa0a8a28fb0b6d504d945a}{parse}} (std\+::vector$<$ std\+::string $>$ \&args)
+\begin{DoxyCompactList}\small\item\em Parses the command line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_ad8aea2617edf53bbc20c8964ee5476e6}\label{classTCLAP_1_1CmdLine_ad8aea2617edf53bbc20c8964ee5476e6}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$ \mbox{\hyperlink{classTCLAP_1_1CmdLine_ad8aea2617edf53bbc20c8964ee5476e6}{get\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a4506e305cd10437c7ce5a5ba34cfed0f}{set\+Output}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$co)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a85b5653d1a5b48fe6accead64615cf33}\label{classTCLAP_1_1CmdLine_a85b5653d1a5b48fe6accead64615cf33}} 
+std\+::string \& \mbox{\hyperlink{classTCLAP_1_1CmdLine_a85b5653d1a5b48fe6accead64615cf33}{get\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Returns the version string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a47a6d496980ee11ffc42e27144a61797}\label{classTCLAP_1_1CmdLine_a47a6d496980ee11ffc42e27144a61797}} 
+std\+::string \& \mbox{\hyperlink{classTCLAP_1_1CmdLine_a47a6d496980ee11ffc42e27144a61797}{get\+Program\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the program name string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a3c281da929a281fb883ea47632b7ad38}\label{classTCLAP_1_1CmdLine_a3c281da929a281fb883ea47632b7ad38}} 
+std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \& \mbox{\hyperlink{classTCLAP_1_1CmdLine_a3c281da929a281fb883ea47632b7ad38}{get\+Arg\+List}} ()
+\begin{DoxyCompactList}\small\item\em Returns the arg\+List. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a805433b7718d1bc5bc9317bbd061449b}\label{classTCLAP_1_1CmdLine_a805433b7718d1bc5bc9317bbd061449b}} 
+\mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}} \& \mbox{\hyperlink{classTCLAP_1_1CmdLine_a805433b7718d1bc5bc9317bbd061449b}{get\+Xor\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a3e9f0ac2c1e97d1f8527da713ddd5a8f}\label{classTCLAP_1_1CmdLine_a3e9f0ac2c1e97d1f8527da713ddd5a8f}} 
+char \mbox{\hyperlink{classTCLAP_1_1CmdLine_a3e9f0ac2c1e97d1f8527da713ddd5a8f}{get\+Delimiter}} ()
+\begin{DoxyCompactList}\small\item\em Returns the delimiter string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a8f61a8c201e31ada985fa998180fd40f}\label{classTCLAP_1_1CmdLine_a8f61a8c201e31ada985fa998180fd40f}} 
+std\+::string \& \mbox{\hyperlink{classTCLAP_1_1CmdLine_a8f61a8c201e31ada985fa998180fd40f}{get\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Returns the message string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a5b23895feae4f4110b77dae372226475}\label{classTCLAP_1_1CmdLine_a5b23895feae4f4110b77dae372226475}} 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_a5b23895feae4f4110b77dae372226475}{has\+Help\+And\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Indicates whether or not the help and version switches were created automatically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_aa02055d8f4864bfa9b505e2d26bbbd87}{set\+Exception\+Handling}} (const bool state)
+\begin{DoxyCompactList}\small\item\em Disables or enables \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}}\textquotesingle{}s internal parsing exception handling. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_aa4a7c93d06f2bef30e627ee618ac8eeb}{get\+Exception\+Handling}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current state of the internal exception handling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a1721ec47c9d9f5ea2eca2f385fcfd2da}\label{classTCLAP_1_1CmdLine_a1721ec47c9d9f5ea2eca2f385fcfd2da}} 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a1721ec47c9d9f5ea2eca2f385fcfd2da}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Allows the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object to be reused. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a6159f91892db3c0b35d67806a5025a98}{ignore\+Unmatched}} (const bool ignore)
+\begin{DoxyCompactList}\small\item\em Allows unmatched args to be ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a698f47333350312eb949aa1ae4f89ad1}\label{classTCLAP_1_1CmdLine_a698f47333350312eb949aa1ae4f89ad1}} 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a698f47333350312eb949aa1ae4f89ad1}{missing\+Args\+Exception}} ()
+\begin{DoxyCompactList}\small\item\em Throws an exception listing the missing args. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_a170a4e711c2a6d58a05e9ad3bc03c08a}{\+\_\+empty\+Combined}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Checks whether a name/flag string matches entirely matches the \mbox{\hyperlink{classTCLAP_1_1Arg_a0abd38f46dbf7d267078134a4817fbb2}{Arg\+::blank\+Char}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a42d669ed2037ac24fc78883aa8600655}\label{classTCLAP_1_1CmdLine_a42d669ed2037ac24fc78883aa8600655}} 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a42d669ed2037ac24fc78883aa8600655}{delete\+On\+Exit}} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Perform a delete ptr; operation on ptr when this object is deleted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a262b8d929eb5b0dfbfc17637c1325c36}\label{classTCLAP_1_1CmdLine_a262b8d929eb5b0dfbfc17637c1325c36}} 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a262b8d929eb5b0dfbfc17637c1325c36}{delete\+On\+Exit}} (\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Perform a delete ptr; operation on ptr when this object is deleted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a4d70f73542d8184e077688bff3801baf}\label{classTCLAP_1_1CmdLine_a4d70f73542d8184e077688bff3801baf}} 
+std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \mbox{\hyperlink{classTCLAP_1_1CmdLine_a4d70f73542d8184e077688bff3801baf}{\+\_\+arg\+List}}
+\begin{DoxyCompactList}\small\item\em The list of arguments that will be tested against the command line. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1CmdLine_a8b856dadc54fa30d0dddba4588ef9344}{\+\_\+prog\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the program. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1CmdLine_a3ccd2ae40f6eb97aebca3de9a02f10cf}{\+\_\+message}}
+\begin{DoxyCompactList}\small\item\em A message used to describe the program. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a2b2b52fffed2dcb7df3cdfc582ec8fd1}\label{classTCLAP_1_1CmdLine_a2b2b52fffed2dcb7df3cdfc582ec8fd1}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1CmdLine_a2b2b52fffed2dcb7df3cdfc582ec8fd1}{\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em The version to be displayed with the --version switch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTCLAP_1_1CmdLine_a2285207b528d5fad18c82a2ee8155f37}{\+\_\+num\+Required}}
+\begin{DoxyCompactList}\small\item\em The number of arguments that are required to be present on the command line. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classTCLAP_1_1CmdLine_a602e65692dc07ea872134f354026a54f}{\+\_\+delimiter}}
+\begin{DoxyCompactList}\small\item\em The character that is used to separate the argument flag/name from the value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a33846aa10c62ecd61640c93c16ac315d}\label{classTCLAP_1_1CmdLine_a33846aa10c62ecd61640c93c16ac315d}} 
+\mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}} \mbox{\hyperlink{classTCLAP_1_1CmdLine_a33846aa10c62ecd61640c93c16ac315d}{\+\_\+xor\+Handler}}
+\begin{DoxyCompactList}\small\item\em The handler that manages xoring lists of args. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \mbox{\hyperlink{classTCLAP_1_1CmdLine_af8d37fbf9d0b60b6acbd737af380f3e5}{\+\_\+arg\+Delete\+On\+Exit\+List}}
+\begin{DoxyCompactList}\small\item\em A list of Args to be explicitly deleted when the destructor is called. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$ $>$ \mbox{\hyperlink{classTCLAP_1_1CmdLine_a79b8a947f8100de977574b45b91117ac}{\+\_\+visitor\+Delete\+On\+Exit\+List}}
+\begin{DoxyCompactList}\small\item\em A list of Visitors to be explicitly deleted when the destructor is called. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a5152bf4ef26217583a3bc708aa0ea83e}\label{classTCLAP_1_1CmdLine_a5152bf4ef26217583a3bc708aa0ea83e}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$ \mbox{\hyperlink{classTCLAP_1_1CmdLine_a5152bf4ef26217583a3bc708aa0ea83e}{\+\_\+output}}
+\begin{DoxyCompactList}\small\item\em Object that handles all output for the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a3609d0c13886053b367d1df80efbe67b}\label{classTCLAP_1_1CmdLine_a3609d0c13886053b367d1df80efbe67b}} 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_a3609d0c13886053b367d1df80efbe67b}{\+\_\+handle\+Exceptions}}
+\begin{DoxyCompactList}\small\item\em Should \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} handle parsing exceptions internally? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_ac6479892319106c49ec644bbc68a255e}\label{classTCLAP_1_1CmdLine_ac6479892319106c49ec644bbc68a255e}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLine_ac6479892319106c49ec644bbc68a255e}{Cmd\+Line}} (const \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a46fd7d72c7a5cfeeacf5e9d0ff2cacf7}\label{classTCLAP_1_1CmdLine_a46fd7d72c7a5cfeeacf5e9d0ff2cacf7}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} \&rhs)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a955b1935c7b2e5118b2573bd2fbb958c}\label{classTCLAP_1_1CmdLine_a955b1935c7b2e5118b2573bd2fbb958c}} 
+void \mbox{\hyperlink{classTCLAP_1_1CmdLine_a955b1935c7b2e5118b2573bd2fbb958c}{\+\_\+constructor}} ()
+\begin{DoxyCompactList}\small\item\em Encapsulates the code common to the constructors (which is all of it). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_ab78aec340244f230a41dd946d0138aba}{\+\_\+user\+Set\+Output}}
+\begin{DoxyCompactList}\small\item\em Is set to true when a user sets the output object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_aea29ec639729a22384ee8759069a5017}\label{classTCLAP_1_1CmdLine_aea29ec639729a22384ee8759069a5017}} 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_aea29ec639729a22384ee8759069a5017}{\+\_\+help\+And\+Version}}
+\begin{DoxyCompactList}\small\item\em Whether or not to automatically create help and version switches. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a33311c171e684783d8c0182f72aeffb1}\label{classTCLAP_1_1CmdLine_a33311c171e684783d8c0182f72aeffb1}} 
+bool \mbox{\hyperlink{classTCLAP_1_1CmdLine_a33311c171e684783d8c0182f72aeffb1}{\+\_\+ignore\+Unmatched}}
+\begin{DoxyCompactList}\small\item\em Whether or not to ignore unmatched args. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class that manages the command line definition and passes along the parsing to the appropriate \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} classes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a6ee7bc32fd24e6e6f966b32f03df9124}\label{classTCLAP_1_1CmdLine_a6ee7bc32fd24e6e6f966b32f03df9124}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!CmdLine@{CmdLine}}
+\index{CmdLine@{CmdLine}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{CmdLine()}{CmdLine()}}
+{\footnotesize\ttfamily TCLAP\+::\+Cmd\+Line\+::\+Cmd\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const char}]{delimiter = {\ttfamily \textquotesingle{}~\textquotesingle{}},  }\item[{const std\+::string \&}]{version = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{bool}]{help\+And\+Version = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Command line constructor. 
+
+Defines how the arguments will be parsed. 
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ The message to be used in the usage output. \\
+\hline
+{\em delimiter} & -\/ The character that is used to separate the argument flag/name from the value. Defaults to \textquotesingle{} \textquotesingle{} (space). \\
+\hline
+{\em version} & -\/ The version number to be used in the --version switch. \\
+\hline
+{\em help\+And\+Version} & -\/ Whether or not to create the Help and Version switches. Defaults to true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a170a4e711c2a6d58a05e9ad3bc03c08a}\label{classTCLAP_1_1CmdLine_a170a4e711c2a6d58a05e9ad3bc03c08a}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_emptyCombined@{\_emptyCombined}}
+\index{\_emptyCombined@{\_emptyCombined}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_emptyCombined()}{\_emptyCombined()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Cmd\+Line\+::\+\_\+empty\+Combined (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks whether a name/flag string matches entirely matches the \mbox{\hyperlink{classTCLAP_1_1Arg_a0abd38f46dbf7d267078134a4817fbb2}{Arg\+::blank\+Char}}. 
+
+Used when multiple switches are combined into a single argument. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ The message to be used in the usage. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a94c511d4735ad9b8c97edaa3827f8bbf}\label{classTCLAP_1_1CmdLine_a94c511d4735ad9b8c97edaa3827f8bbf}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!add@{add}}
+\index{add@{add}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds an argument to the list of arguments to be parsed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Argument to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_a13b29ab754c030185e58f779dc355631}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_ab8a08e8f4d3ca7709c85416f76e805a3}\label{classTCLAP_1_1CmdLine_ab8a08e8f4d3ca7709c85416f76e805a3}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!add@{add}}
+\index{add@{add}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+An alternative add. 
+
+Functionally identical. 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Argument to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_a7c6a097c0f2a09dd1987e9da1af8b457}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_aa4a7c93d06f2bef30e627ee618ac8eeb}\label{classTCLAP_1_1CmdLine_aa4a7c93d06f2bef30e627ee618ac8eeb}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!getExceptionHandling@{getExceptionHandling}}
+\index{getExceptionHandling@{getExceptionHandling}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{getExceptionHandling()}{getExceptionHandling()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Cmd\+Line\+::get\+Exception\+Handling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current state of the internal exception handling. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Parsing exceptions are handled internally. \\
+\hline
+{\em false} & Parsing exceptions are propagated to the caller. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a6159f91892db3c0b35d67806a5025a98}\label{classTCLAP_1_1CmdLine_a6159f91892db3c0b35d67806a5025a98}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!ignoreUnmatched@{ignoreUnmatched}}
+\index{ignoreUnmatched@{ignoreUnmatched}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{ignoreUnmatched()}{ignoreUnmatched()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::ignore\+Unmatched (\begin{DoxyParamCaption}\item[{const bool}]{ignore }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows unmatched args to be ignored. 
+
+By default false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ignore} & If true the cmdline will ignore any unmatched args and if false it will behave as normal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_acb07daf5a1370c176a7b4a6e4119fe6e}\label{classTCLAP_1_1CmdLine_acb07daf5a1370c176a7b4a6e4119fe6e}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!parse@{parse}}
+\index{parse@{parse}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::parse (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$const $\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Parses the command line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & -\/ Number of arguments. \\
+\hline
+{\em argv} & -\/ Array of arguments. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_a6649336bddfc8421148718a691fd89b4}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a712c3edf86aa0a8a28fb0b6d504d945a}\label{classTCLAP_1_1CmdLine_a712c3edf86aa0a8a28fb0b6d504d945a}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!parse@{parse}}
+\index{parse@{parse}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::parse (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parses the command line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ A vector of strings representing the args. args\mbox{[}0\mbox{]} is still the program name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_aa02055d8f4864bfa9b505e2d26bbbd87}\label{classTCLAP_1_1CmdLine_aa02055d8f4864bfa9b505e2d26bbbd87}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!setExceptionHandling@{setExceptionHandling}}
+\index{setExceptionHandling@{setExceptionHandling}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{setExceptionHandling()}{setExceptionHandling()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::set\+Exception\+Handling (\begin{DoxyParamCaption}\item[{const bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disables or enables \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}}\textquotesingle{}s internal parsing exception handling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Should \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} handle parsing exceptions internally? \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a4506e305cd10437c7ce5a5ba34cfed0f}\label{classTCLAP_1_1CmdLine_a4506e305cd10437c7ce5a5ba34cfed0f}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!setOutput@{setOutput}}
+\index{setOutput@{setOutput}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{setOutput()}{setOutput()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$}]{co }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em co} & -\/ \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} object that we want to use instead. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_ab208b32bd9489781509d7ecddf8a92a0}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_afbaa2071d0c3276b383089acabdc0dd2}\label{classTCLAP_1_1CmdLine_afbaa2071d0c3276b383089acabdc0dd2}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!xorAdd@{xorAdd}}
+\index{xorAdd@{xorAdd}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{xorAdd()}{xorAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::xor\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&}]{a,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Add two Args that will be xor\textquotesingle{}d. 
+
+If this method is used, add does not need to be called. 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ Argument to be added and xor\textquotesingle{}d. \\
+\hline
+{\em b} & -\/ Argument to be added and xor\textquotesingle{}d. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_a69859e3713623eb06c9c335248d9c83f}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_a7f45e0ca068c52d2732cd9e7b354c0ca}\label{classTCLAP_1_1CmdLine_a7f45e0ca068c52d2732cd9e7b354c0ca}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!xorAdd@{xorAdd}}
+\index{xorAdd@{xorAdd}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{xorAdd()}{xorAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TCLAP\+::\+Cmd\+Line\+::xor\+Add (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&}]{xors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Add a list of Args that will be xor\textquotesingle{}d. 
+
+If this method is used, add does not need to be called. 
+\begin{DoxyParams}{Parameters}
+{\em xors} & -\/ List of Args to be added and xor\textquotesingle{}d. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface_ab89eafdc01e4551d192ad28fbb87539b}{TCLAP\+::\+Cmd\+Line\+Interface}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1CmdLine_af8d37fbf9d0b60b6acbd737af380f3e5}\label{classTCLAP_1_1CmdLine_af8d37fbf9d0b60b6acbd737af380f3e5}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_argDeleteOnExitList@{\_argDeleteOnExitList}}
+\index{\_argDeleteOnExitList@{\_argDeleteOnExitList}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_argDeleteOnExitList}{\_argDeleteOnExitList}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}$\ast$$>$ TCLAP\+::\+Cmd\+Line\+::\+\_\+arg\+Delete\+On\+Exit\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A list of Args to be explicitly deleted when the destructor is called. 
+
+At the moment, this only includes the three default Args. \mbox{\Hypertarget{classTCLAP_1_1CmdLine_a602e65692dc07ea872134f354026a54f}\label{classTCLAP_1_1CmdLine_a602e65692dc07ea872134f354026a54f}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_delimiter@{\_delimiter}}
+\index{\_delimiter@{\_delimiter}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_delimiter}{\_delimiter}}
+{\footnotesize\ttfamily char TCLAP\+::\+Cmd\+Line\+::\+\_\+delimiter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The character that is used to separate the argument flag/name from the value. 
+
+Defaults to \textquotesingle{} \textquotesingle{} (space). \mbox{\Hypertarget{classTCLAP_1_1CmdLine_a3ccd2ae40f6eb97aebca3de9a02f10cf}\label{classTCLAP_1_1CmdLine_a3ccd2ae40f6eb97aebca3de9a02f10cf}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_message@{\_message}}
+\index{\_message@{\_message}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_message}{\_message}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Cmd\+Line\+::\+\_\+message\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A message used to describe the program. 
+
+Used in the usage output. \mbox{\Hypertarget{classTCLAP_1_1CmdLine_a2285207b528d5fad18c82a2ee8155f37}\label{classTCLAP_1_1CmdLine_a2285207b528d5fad18c82a2ee8155f37}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_numRequired@{\_numRequired}}
+\index{\_numRequired@{\_numRequired}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_numRequired}{\_numRequired}}
+{\footnotesize\ttfamily int TCLAP\+::\+Cmd\+Line\+::\+\_\+num\+Required\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of arguments that are required to be present on the command line. 
+
+This is set dynamically, based on the Args added to the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object. \mbox{\Hypertarget{classTCLAP_1_1CmdLine_a8b856dadc54fa30d0dddba4588ef9344}\label{classTCLAP_1_1CmdLine_a8b856dadc54fa30d0dddba4588ef9344}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_progName@{\_progName}}
+\index{\_progName@{\_progName}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_progName}{\_progName}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Cmd\+Line\+::\+\_\+prog\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of the program. 
+
+Set to argv\mbox{[}0\mbox{]}. \mbox{\Hypertarget{classTCLAP_1_1CmdLine_ab78aec340244f230a41dd946d0138aba}\label{classTCLAP_1_1CmdLine_ab78aec340244f230a41dd946d0138aba}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_userSetOutput@{\_userSetOutput}}
+\index{\_userSetOutput@{\_userSetOutput}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_userSetOutput}{\_userSetOutput}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Cmd\+Line\+::\+\_\+user\+Set\+Output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is set to true when a user sets the output object. 
+
+We use this so that we don\textquotesingle{}t delete objects that are created outside of this lib. \mbox{\Hypertarget{classTCLAP_1_1CmdLine_a79b8a947f8100de977574b45b91117ac}\label{classTCLAP_1_1CmdLine_a79b8a947f8100de977574b45b91117ac}} 
+\index{TCLAP::CmdLine@{TCLAP::CmdLine}!\_visitorDeleteOnExitList@{\_visitorDeleteOnExitList}}
+\index{\_visitorDeleteOnExitList@{\_visitorDeleteOnExitList}!TCLAP::CmdLine@{TCLAP::CmdLine}}
+\doxysubsubsection{\texorpdfstring{\_visitorDeleteOnExitList}{\_visitorDeleteOnExitList}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}}$\ast$$>$ TCLAP\+::\+Cmd\+Line\+::\+\_\+visitor\+Delete\+On\+Exit\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A list of Visitors to be explicitly deleted when the destructor is called. 
+
+At the moment, these are the Visitors created for the default Args. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Cmd\+Line.\+h\end{DoxyCompactItemize}

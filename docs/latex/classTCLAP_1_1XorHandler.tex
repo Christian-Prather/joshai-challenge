@@ -1,0 +1,133 @@
+\hypertarget{classTCLAP_1_1XorHandler}{}\doxysection{TCLAP\+::Xor\+Handler Class Reference}
+\label{classTCLAP_1_1XorHandler}\index{TCLAP::XorHandler@{TCLAP::XorHandler}}
+
+
+This class handles lists of \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}\textquotesingle{}s that are to be XOR\textquotesingle{}d on the command line.  
+
+
+
+
+{\ttfamily \#include $<$Xor\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for TCLAP\+::Xor\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTCLAP_1_1XorHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1XorHandler_a195391f50b7fe5eb939c2f6d236f571e}{Xor\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1XorHandler_a76f2fb62ecddeff8d1b44cfb72faa15d}{add}} (const std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&ors)
+\begin{DoxyCompactList}\small\item\em Add a list of Arg$\ast$\textquotesingle{}s that will be xor\textquotesingle{}d together. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTCLAP_1_1XorHandler_a3df7722e4c4c5d331de69fc902336b00}{check}} (const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} is in one of the xor lists and if it does match one, returns the size of the xor list that the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} matched. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_aca185a80e9df6e4250a230fa5aec7891}\label{classTCLAP_1_1XorHandler_aca185a80e9df6e4250a230fa5aec7891}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1XorHandler_aca185a80e9df6e4250a230fa5aec7891}{short\+Usage}} ()
+\begin{DoxyCompactList}\small\item\em Returns the XOR specific short usage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1XorHandler_a257a855934eb343a0fad3c4e5fe5ff57}{print\+Long\+Usage}} (std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Prints the XOR specific long usage. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1XorHandler_a1a74fab4667cc591a1e3094c91bc942d}{contains}} (const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Simply checks whether the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} is contained in one of the arg lists. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a6b25b05b817a5c8cea137eb032cba7de}\label{classTCLAP_1_1XorHandler_a6b25b05b817a5c8cea137eb032cba7de}} 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ $>$ \& {\bfseries get\+Xor\+List} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a4ebd5b96e23a0ab03bdd431fe622d4e1}\label{classTCLAP_1_1XorHandler_a4ebd5b96e23a0ab03bdd431fe622d4e1}} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ $>$ \mbox{\hyperlink{classTCLAP_1_1XorHandler_a4ebd5b96e23a0ab03bdd431fe622d4e1}{\+\_\+or\+List}}
+\begin{DoxyCompactList}\small\item\em The list of of lists of \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}\textquotesingle{}s to be or\textquotesingle{}d together. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles lists of \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}\textquotesingle{}s that are to be XOR\textquotesingle{}d on the command line. 
+
+This is used by \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} and you shouldn\textquotesingle{}t ever use it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a195391f50b7fe5eb939c2f6d236f571e}\label{classTCLAP_1_1XorHandler_a195391f50b7fe5eb939c2f6d236f571e}} 
+\index{TCLAP::XorHandler@{TCLAP::XorHandler}!XorHandler@{XorHandler}}
+\index{XorHandler@{XorHandler}!TCLAP::XorHandler@{TCLAP::XorHandler}}
+\doxysubsubsection{\texorpdfstring{XorHandler()}{XorHandler()}}
+{\footnotesize\ttfamily TCLAP\+::\+Xor\+Handler\+::\+Xor\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Does nothing. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a76f2fb62ecddeff8d1b44cfb72faa15d}\label{classTCLAP_1_1XorHandler_a76f2fb62ecddeff8d1b44cfb72faa15d}} 
+\index{TCLAP::XorHandler@{TCLAP::XorHandler}!add@{add}}
+\index{add@{add}!TCLAP::XorHandler@{TCLAP::XorHandler}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Xor\+Handler\+::add (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&}]{ors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a list of Arg$\ast$\textquotesingle{}s that will be xor\textquotesingle{}d together. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ors} & -\/ list of Arg$\ast$ that will be xor\textquotesingle{}d. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a3df7722e4c4c5d331de69fc902336b00}\label{classTCLAP_1_1XorHandler_a3df7722e4c4c5d331de69fc902336b00}} 
+\index{TCLAP::XorHandler@{TCLAP::XorHandler}!check@{check}}
+\index{check@{check}!TCLAP::XorHandler@{TCLAP::XorHandler}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int TCLAP\+::\+Xor\+Handler\+::check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks whether the specified \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} is in one of the xor lists and if it does match one, returns the size of the xor list that the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} matched. 
+
+If the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} matches, then it also sets the rest of the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}\textquotesingle{}s in the list. You shouldn\textquotesingle{}t use this. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ The \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to be checked. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a1a74fab4667cc591a1e3094c91bc942d}\label{classTCLAP_1_1XorHandler_a1a74fab4667cc591a1e3094c91bc942d}} 
+\index{TCLAP::XorHandler@{TCLAP::XorHandler}!contains@{contains}}
+\index{contains@{contains}!TCLAP::XorHandler@{TCLAP::XorHandler}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Xor\+Handler\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Simply checks whether the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} is contained in one of the arg lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ The \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to be checked. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1XorHandler_a257a855934eb343a0fad3c4e5fe5ff57}\label{classTCLAP_1_1XorHandler_a257a855934eb343a0fad3c4e5fe5ff57}} 
+\index{TCLAP::XorHandler@{TCLAP::XorHandler}!printLongUsage@{printLongUsage}}
+\index{printLongUsage@{printLongUsage}!TCLAP::XorHandler@{TCLAP::XorHandler}}
+\doxysubsubsection{\texorpdfstring{printLongUsage()}{printLongUsage()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Xor\+Handler\+::print\+Long\+Usage (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+
+
+Prints the XOR specific long usage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ Stream to print to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Xor\+Handler.\+h\end{DoxyCompactItemize}

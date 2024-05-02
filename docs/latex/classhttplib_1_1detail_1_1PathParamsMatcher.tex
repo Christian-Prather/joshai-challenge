@@ -1,0 +1,72 @@
+\hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher}{}\doxysection{httplib\+::detail\+::Path\+Params\+Matcher Class Reference}
+\label{classhttplib_1_1detail_1_1PathParamsMatcher}\index{httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}}
+
+
+Captures parameters in request path and stores them in Request\+::path\+\_\+params.  
+
+
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::detail\+::Path\+Params\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classhttplib_1_1detail_1_1PathParamsMatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::detail\+::Path\+Params\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhttplib_1_1detail_1_1PathParamsMatcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_a6b0b367cc4db29c2f81bd3e858da0e10}\label{classhttplib_1_1detail_1_1PathParamsMatcher_a6b0b367cc4db29c2f81bd3e858da0e10}} 
+{\bfseries Path\+Params\+Matcher} (const std\+::string \&pattern)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_aa0446fa3fcb729f471f23b0e8ff71127}\label{classhttplib_1_1detail_1_1PathParamsMatcher_aa0446fa3fcb729f471f23b0e8ff71127}} 
+bool {\bfseries match} (\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&request) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_a21664b11822b28355a290ed76a80ea00}\label{classhttplib_1_1detail_1_1PathParamsMatcher_a21664b11822b28355a290ed76a80ea00}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries static\+\_\+fragments\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_a9dee833daf8a8feb45889de4c8f68d79}\label{classhttplib_1_1detail_1_1PathParamsMatcher_a9dee833daf8a8feb45889de4c8f68d79}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries param\+\_\+names\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_aebb9286fa293343ab05704dbc07f9dcc}\label{classhttplib_1_1detail_1_1PathParamsMatcher_aebb9286fa293343ab05704dbc07f9dcc}} 
+static constexpr char {\bfseries marker} = \textquotesingle{}\+:\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_ac3c0b3f1ee7e74e18c0f1aa7186c711f}\label{classhttplib_1_1detail_1_1PathParamsMatcher_ac3c0b3f1ee7e74e18c0f1aa7186c711f}} 
+static constexpr char {\bfseries separator} = \textquotesingle{}/\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Captures parameters in request path and stores them in Request\+::path\+\_\+params. 
+
+Capture name is a substring of a pattern from \+: to /. The rest of the pattern is matched agains the request path directly Parameters are captured starting from the next character after the end of the last matched static pattern fragment until the next /.
+
+Example pattern\+: \char`\"{}/path/fragments/\+:capture/more/fragments/\+:second\+\_\+capture\char`\"{} Static fragments\+: \char`\"{}/path/fragments/\char`\"{}, \char`\"{}more/fragments/\char`\"{}
+
+Given the following request path\+: \char`\"{}/path/fragments/\+:1/more/fragments/\+:2\char`\"{} the resulting capture will be \{\{\char`\"{}capture\char`\"{}, \char`\"{}1\char`\"{}\}, \{\char`\"{}second\+\_\+capture\char`\"{}, \char`\"{}2\char`\"{}\}\} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{classConnectionManager}{}\doxysection{Connection\+Manager Class Reference}
+\label{classConnectionManager}\index{ConnectionManager@{ConnectionManager}}
+
+
+The client server connection manager in charge of how the connection is established, handling server response errors, and managing if a connection should be kept alive or reset.  
+
+
+
+
+{\ttfamily \#include $<$connection\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for Connection\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classConnectionManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConnectionManager_a0ef8bee4805dfdda87431be422ec6661}{Connection\+Manager}} (std\+::string \mbox{\hyperlink{classConnectionManager_a39c71852f7835ca95fcb1c8781b2c99b}{server\+Address}}, bool keep\+Alive)
+\begin{DoxyCompactList}\small\item\em Construct a new Connection Manager object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structServerResponse}{Server\+Response}} \mbox{\hyperlink{classConnectionManager_a2a50deccc2641123e2655b7383feaf13}{get}} (std\+::string \&command)
+\begin{DoxyCompactList}\small\item\em Returns full response from server to a get command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConnectionManager_a39c71852f7835ca95fcb1c8781b2c99b}\label{classConnectionManager_a39c71852f7835ca95fcb1c8781b2c99b}} 
+std\+::string \mbox{\hyperlink{classConnectionManager_a39c71852f7835ca95fcb1c8781b2c99b}{server\+Address}}
+\begin{DoxyCompactList}\small\item\em IP address of server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConnectionManager_aefcfff9adf80f7bcbbcbf6a3af17f67c}\label{classConnectionManager_aefcfff9adf80f7bcbbcbf6a3af17f67c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhttplib_1_1Client}{httplib\+::\+Client}} $>$ \mbox{\hyperlink{classConnectionManager_aefcfff9adf80f7bcbbcbf6a3af17f67c}{connection}}
+\begin{DoxyCompactList}\small\item\em Library/ protocol specific connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The client server connection manager in charge of how the connection is established, handling server response errors, and managing if a connection should be kept alive or reset. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConnectionManager_a0ef8bee4805dfdda87431be422ec6661}\label{classConnectionManager_a0ef8bee4805dfdda87431be422ec6661}} 
+\index{ConnectionManager@{ConnectionManager}!ConnectionManager@{ConnectionManager}}
+\index{ConnectionManager@{ConnectionManager}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{ConnectionManager()}{ConnectionManager()}}
+{\footnotesize\ttfamily Connection\+Manager\+::\+Connection\+Manager (\begin{DoxyParamCaption}\item[{std\+::string}]{server\+Address,  }\item[{bool}]{keep\+Alive }\end{DoxyParamCaption})}
+
+
+
+Construct a new Connection Manager object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+Address} & IP address \\
+\hline
+{\em keep\+Alive} & true if http connection should use keep\+Alive header \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConnectionManager_a2a50deccc2641123e2655b7383feaf13}\label{classConnectionManager_a2a50deccc2641123e2655b7383feaf13}} 
+\index{ConnectionManager@{ConnectionManager}!get@{get}}
+\index{get@{get}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structServerResponse}{Server\+Response}} Connection\+Manager\+::get (\begin{DoxyParamCaption}\item[{std\+::string \&}]{command }\end{DoxyParamCaption})}
+
+
+
+Returns full response from server to a get command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & String command (\char`\"{}/lights\char`\"{}, \char`\"{}/lights/\{id\}\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structServerResponse}{Server\+Response}} Full response in json and status from server 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{connection__manager_8h}{connection\+\_\+manager.\+h}}\item 
+/home/christian/\+Documents/joshai-\/challenge/src/connection\+\_\+manager.\+cpp\end{DoxyCompactItemize}

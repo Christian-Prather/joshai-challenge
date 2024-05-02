@@ -1,0 +1,77 @@
+\hypertarget{classhttplib_1_1Result}{}\doxysection{httplib\+::Result Class Reference}
+\label{classhttplib_1_1Result}\index{httplib::Result@{httplib::Result}}
+
+
+Collaboration diagram for httplib\+::Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhttplib_1_1Result__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_aa6badab908c06e5da630a303de27fedf}\label{classhttplib_1_1Result_aa6badab908c06e5da630a303de27fedf}} 
+{\bfseries Result} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $>$ \&\&res, Error err, Headers \&\&request\+\_\+headers=Headers\{\})
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ac6c15eebdaed35d1d667ca44a2401bb6}\label{classhttplib_1_1Result_ac6c15eebdaed35d1d667ca44a2401bb6}} 
+{\bfseries operator bool} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_aa3da86d4b239532badf920e3c462d8c8}\label{classhttplib_1_1Result_aa3da86d4b239532badf920e3c462d8c8}} 
+bool {\bfseries operator==} (std\+::nullptr\+\_\+t) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ab50071c2f593c8d3550efdae743f73c1}\label{classhttplib_1_1Result_ab50071c2f593c8d3550efdae743f73c1}} 
+bool {\bfseries operator!=} (std\+::nullptr\+\_\+t) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ab45f150b0e8746ef169df254fc5c0efb}\label{classhttplib_1_1Result_ab45f150b0e8746ef169df254fc5c0efb}} 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& {\bfseries value} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a3a33a81e40c5fb00e46838a1342702a4}\label{classhttplib_1_1Result_a3a33a81e40c5fb00e46838a1342702a4}} 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& {\bfseries value} ()
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_af63a99de49d816615183f6295f161a8c}\label{classhttplib_1_1Result_af63a99de49d816615183f6295f161a8c}} 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ae18c557600dd989bcc7eb31ea83d308b}\label{classhttplib_1_1Result_ae18c557600dd989bcc7eb31ea83d308b}} 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ae717e049d1c79e0f879eea0911f66036}\label{classhttplib_1_1Result_ae717e049d1c79e0f879eea0911f66036}} 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_aa3a6a273907a19fbe3eb282be2935b64}\label{classhttplib_1_1Result_aa3a6a273907a19fbe3eb282be2935b64}} 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} $\ast$ {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ae7305fb10af90fa0850c9efcaea1e99b}\label{classhttplib_1_1Result_ae7305fb10af90fa0850c9efcaea1e99b}} 
+Error {\bfseries error} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a0de2f7a18bec984ff58bc566c0838dc4}\label{classhttplib_1_1Result_a0de2f7a18bec984ff58bc566c0838dc4}} 
+bool {\bfseries has\+\_\+request\+\_\+header} (const std\+::string \&key) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a9756521bccf284f789e67a745be63c86}\label{classhttplib_1_1Result_a9756521bccf284f789e67a745be63c86}} 
+std\+::string {\bfseries get\+\_\+request\+\_\+header\+\_\+value} (const std\+::string \&key, size\+\_\+t id=0) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a6e7092bda0dee1e2381c1f2d926323cb}\label{classhttplib_1_1Result_a6e7092bda0dee1e2381c1f2d926323cb}} 
+uint64\+\_\+t {\bfseries get\+\_\+request\+\_\+header\+\_\+value\+\_\+u64} (const std\+::string \&key, size\+\_\+t id=0) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a6fc93c8b64dd8b2639cb696fc8c0cf43}\label{classhttplib_1_1Result_a6fc93c8b64dd8b2639cb696fc8c0cf43}} 
+size\+\_\+t {\bfseries get\+\_\+request\+\_\+header\+\_\+value\+\_\+count} (const std\+::string \&key) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_afc4c775717a978a4ca02ceaa1ba5c48d}\label{classhttplib_1_1Result_afc4c775717a978a4ca02ceaa1ba5c48d}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $>$ {\bfseries res\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_ac3ba68bf5dbf4445ce19f8d8c6704603}\label{classhttplib_1_1Result_ac3ba68bf5dbf4445ce19f8d8c6704603}} 
+Error {\bfseries err\+\_\+} = Error\+::\+Unknown
+\item 
+\mbox{\Hypertarget{classhttplib_1_1Result_a2cfd84510cab917f8f0ca3e5ce453774}\label{classhttplib_1_1Result_a2cfd84510cab917f8f0ca3e5ce453774}} 
+Headers {\bfseries request\+\_\+headers\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

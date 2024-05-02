@@ -1,0 +1,325 @@
+\hypertarget{classTCLAP_1_1MultiArg}{}\doxysection{TCLAP\+::Multi\+Arg$<$ T $>$ Class Template Reference}
+\label{classTCLAP_1_1MultiArg}\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+
+
+An argument that allows multiple values of type T to be specified.  
+
+
+
+
+{\ttfamily \#include $<$Multi\+Arg.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Multi\+Arg$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classTCLAP_1_1MultiArg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Multi\+Arg$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classTCLAP_1_1MultiArg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_adae435f03fdde769bca57327487aab78}\label{classTCLAP_1_1MultiArg_adae435f03fdde769bca57327487aab78}} 
+typedef std\+::vector$<$ T $>$ {\bfseries container\+\_\+type}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a34196784baca2bd5aa079d639d49a7ca}\label{classTCLAP_1_1MultiArg_a34196784baca2bd5aa079d639d49a7ca}} 
+typedef container\+\_\+type\+::iterator {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a3f8e9e8f5dcc7d3e6a518f42134cf64f}\label{classTCLAP_1_1MultiArg_a3f8e9e8f5dcc7d3e6a518f42134cf64f}} 
+typedef container\+\_\+type\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg_a49b5437c7f06cd6864c07dc59814a953}{Multi\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, const std\+::string \&type\+Desc, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg_a48c90a873389280f72fb5d6ef707b400}{Multi\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, const std\+::string \&type\+Desc, \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&parser, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg_a38b1e32a8189356bd1e5ec7c2d43c1a3}{Multi\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$constraint, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg_ad4fcd892de2f1ef275c30dc499215208}{Multi\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$constraint, \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&parser, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1MultiArg_a344d3cf2128c510f92825e421ea667c7}{process\+Arg}} (int $\ast$i, std\+::vector$<$ std\+::string $>$ \&args)
+\begin{DoxyCompactList}\small\item\em Handles the processing of the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a099201e8a8b3da93e24b6a07fa9e23b7}\label{classTCLAP_1_1MultiArg_a099201e8a8b3da93e24b6a07fa9e23b7}} 
+const std\+::vector$<$ T $>$ \& \mbox{\hyperlink{classTCLAP_1_1MultiArg_a099201e8a8b3da93e24b6a07fa9e23b7}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of type T containing the values parsed from the command line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a9309fbbdf04e379085bf1b64d09a2fcb}\label{classTCLAP_1_1MultiArg_a9309fbbdf04e379085bf1b64d09a2fcb}} 
+const\+\_\+iterator \mbox{\hyperlink{classTCLAP_1_1MultiArg_a9309fbbdf04e379085bf1b64d09a2fcb}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator over the values parsed from the command line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a475371bdbc82e385c0aacd6af32759b0}\label{classTCLAP_1_1MultiArg_a475371bdbc82e385c0aacd6af32759b0}} 
+const\+\_\+iterator \mbox{\hyperlink{classTCLAP_1_1MultiArg_a475371bdbc82e385c0aacd6af32759b0}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns the end of the values parsed from the command line. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1MultiArg_ad4a0495acbde4b487e97bcf75688cd25}{short\+ID}} (const std\+::string \&val=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Returns the a short id string. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1MultiArg_af2afdcc8c926cfd16b60120a1beb2406}{long\+ID}} (const std\+::string \&val=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Returns the a long id string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a709f7cc102afc916a61a79ab1502c423}\label{classTCLAP_1_1MultiArg_a709f7cc102afc916a61a79ab1502c423}} 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1MultiArg_a709f7cc102afc916a61a79ab1502c423}{is\+Required}} () const
+\begin{DoxyCompactList}\small\item\em Once we\textquotesingle{}ve matched the first value, then the arg is no longer required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_ab05097627c81cd65975fa1b99fae9bd0}\label{classTCLAP_1_1MultiArg_ab05097627c81cd65975fa1b99fae9bd0}} 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1MultiArg_ab05097627c81cd65975fa1b99fae9bd0}{allow\+More}} ()
+\begin{DoxyCompactList}\small\item\em Used for Multi\+Args and \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}} to determine whether args can still be set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_ab21f01f22978a1c0eea716399e9ff89b}\label{classTCLAP_1_1MultiArg_ab21f01f22978a1c0eea716399e9ff89b}} 
+virtual void \mbox{\hyperlink{classTCLAP_1_1MultiArg_ab21f01f22978a1c0eea716399e9ff89b}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Clears the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} object and allows it to be reused by new command lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTCLAP_1_1MultiArg_a26cbf5e86ac66d876f9285f1fda22470}{\+\_\+extract\+Value}} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Extracts the value from the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_aabcab153e09608343713a6ffef431783}\label{classTCLAP_1_1MultiArg_aabcab153e09608343713a6ffef431783}} 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classTCLAP_1_1MultiArg_aabcab153e09608343713a6ffef431783}{\+\_\+values}}
+\begin{DoxyCompactList}\small\item\em The list of values parsed from the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a0f6a2b04fe15d1ede95165fc6e1949e8}\label{classTCLAP_1_1MultiArg_a0f6a2b04fe15d1ede95165fc6e1949e8}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1MultiArg_a0f6a2b04fe15d1ede95165fc6e1949e8}{\+\_\+type\+Desc}}
+\begin{DoxyCompactList}\small\item\em The description of type T to be used in the usage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_afc754048b66bc3a251268947273ea906}\label{classTCLAP_1_1MultiArg_afc754048b66bc3a251268947273ea906}} 
+\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classTCLAP_1_1MultiArg_afc754048b66bc3a251268947273ea906}{\+\_\+constraint}}
+\begin{DoxyCompactList}\small\item\em A list of constraint on this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a93a3ef586f763d46839c0e737689b85f}\label{classTCLAP_1_1MultiArg_a93a3ef586f763d46839c0e737689b85f}} 
+bool \mbox{\hyperlink{classTCLAP_1_1MultiArg_a93a3ef586f763d46839c0e737689b85f}{\+\_\+allow\+More}}
+\begin{DoxyCompactList}\small\item\em Used by \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}} to decide whether to keep parsing for this arg. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_afee487984c8a7a3bdb5221cfd0bd9e51}\label{classTCLAP_1_1MultiArg_afee487984c8a7a3bdb5221cfd0bd9e51}} 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg_afee487984c8a7a3bdb5221cfd0bd9e51}{Multi\+Arg}} (const \mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_ae135144883068d84be90044437c495b7}\label{classTCLAP_1_1MultiArg_ae135144883068d84be90044437c495b7}} 
+\mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}}$<$ T $>$ \&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class TCLAP\+::\+Multi\+Arg$<$ T $>$}
+
+An argument that allows multiple values of type T to be specified. 
+
+Very similar to a \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}}, except a vector of values will be returned instead of just one. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a49b5437c7f06cd6864c07dc59814a953}\label{classTCLAP_1_1MultiArg_a49b5437c7f06cd6864c07dc59814a953}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!MultiArg@{MultiArg}}
+\index{MultiArg@{MultiArg}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MultiArg()}{MultiArg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{const std\+::string \&}]{type\+Desc,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em type\+Desc} & -\/ A short, human readable description of the type that this object expects. This is used in the generation of the USAGE statement. The goal is to be helpful to the end user of the program. \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a48c90a873389280f72fb5d6ef707b400}\label{classTCLAP_1_1MultiArg_a48c90a873389280f72fb5d6ef707b400}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!MultiArg@{MultiArg}}
+\index{MultiArg@{MultiArg}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MultiArg()}{MultiArg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{const std\+::string \&}]{type\+Desc,  }\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{parser,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em type\+Desc} & -\/ A short, human readable description of the type that this object expects. This is used in the generation of the USAGE statement. The goal is to be helpful to the end user of the program. \\
+\hline
+{\em parser} & -\/ A \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} parser object to add this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a38b1e32a8189356bd1e5ec7c2d43c1a3}\label{classTCLAP_1_1MultiArg_a38b1e32a8189356bd1e5ec7c2d43c1a3}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!MultiArg@{MultiArg}}
+\index{MultiArg@{MultiArg}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MultiArg()}{MultiArg()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$}]{constraint,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em constraint} & -\/ A pointer to a \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} object used to constrain this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}. \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_ad4fcd892de2f1ef275c30dc499215208}\label{classTCLAP_1_1MultiArg_ad4fcd892de2f1ef275c30dc499215208}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!MultiArg@{MultiArg}}
+\index{MultiArg@{MultiArg}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MultiArg()}{MultiArg()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$}]{constraint,  }\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{parser,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em constraint} & -\/ A pointer to a \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} object used to constrain this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}. \\
+\hline
+{\em parser} & -\/ A \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} parser object to add this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a26cbf5e86ac66d876f9285f1fda22470}\label{classTCLAP_1_1MultiArg_a26cbf5e86ac66d876f9285f1fda22470}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!\_extractValue@{\_extractValue}}
+\index{\_extractValue@{\_extractValue}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_extractValue()}{\_extractValue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::\+\_\+extract\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Extracts the value from the string. 
+
+Attempts to parse string as type T, if this fails an exception is thrown. 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ The string to be read. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_af2afdcc8c926cfd16b60120a1beb2406}\label{classTCLAP_1_1MultiArg_af2afdcc8c926cfd16b60120a1beb2406}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!longID@{longID}}
+\index{longID@{longID}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{longID()}{longID()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string \mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::long\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the a long id string. 
+
+Used in the usage. 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ value to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTCLAP_1_1Arg_a1a71b113dfa30f35551cc5b71f6389e2}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a81babdb1b8710712e804f288a261b2a3}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_a344d3cf2128c510f92825e421ea667c7}\label{classTCLAP_1_1MultiArg_a344d3cf2128c510f92825e421ea667c7}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!processArg@{processArg}}
+\index{processArg@{processArg}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{processArg()}{processArg()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::process\+Arg (\begin{DoxyParamCaption}\item[{int $\ast$}]{i,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the processing of the argument. 
+
+This re-\/implements the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} version of this method to set the \+\_\+value of the argument appropriately. It knows the difference between labeled and unlabeled. 
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ Pointer the the current argument in the list. \\
+\hline
+{\em args} & -\/ Mutable list of strings. Passed from main(). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_aa5a35665519518dcb60e53d3a4858802}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1MultiArg_ad4a0495acbde4b487e97bcf75688cd25}\label{classTCLAP_1_1MultiArg_ad4a0495acbde4b487e97bcf75688cd25}} 
+\index{TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}!shortID@{shortID}}
+\index{shortID@{shortID}!TCLAP::MultiArg$<$ T $>$@{TCLAP::MultiArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shortID()}{shortID()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string \mbox{\hyperlink{classTCLAP_1_1MultiArg}{TCLAP\+::\+Multi\+Arg}}$<$ T $>$\+::short\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the a short id string. 
+
+Used in the usage. 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ value to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTCLAP_1_1Arg_af130aaa674c3531a7cea7efe31afa5df}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a520265204d6d7ed40ab4df29e69cb27d}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Multi\+Arg.\+h\end{DoxyCompactItemize}

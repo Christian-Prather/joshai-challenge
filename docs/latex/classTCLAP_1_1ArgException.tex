@@ -1,0 +1,119 @@
+\hypertarget{classTCLAP_1_1ArgException}{}\doxysection{TCLAP\+::Arg\+Exception Class Reference}
+\label{classTCLAP_1_1ArgException}\index{TCLAP::ArgException@{TCLAP::ArgException}}
+
+
+A simple class that defines and argument exception.  
+
+
+
+
+{\ttfamily \#include $<$Arg\+Exception.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Arg\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1ArgException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Arg\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classTCLAP_1_1ArgException__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1ArgException_a67389912b628e95d530f8bb8de97b309}{Arg\+Exception}} (const std\+::string \&text=\char`\"{}undefined exception\char`\"{}, const std\+::string \&id=\char`\"{}undefined\char`\"{}, const std\+::string \&td=\char`\"{}Generic \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a5c5df6a814b05c623a01607fb82980f4}\label{classTCLAP_1_1ArgException_a5c5df6a814b05c623a01607fb82980f4}} 
+virtual \mbox{\hyperlink{classTCLAP_1_1ArgException_a5c5df6a814b05c623a01607fb82980f4}{$\sim$\+Arg\+Exception}} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_ada4c6840a3cd9ab6134cf7108fead7cb}\label{classTCLAP_1_1ArgException_ada4c6840a3cd9ab6134cf7108fead7cb}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_ada4c6840a3cd9ab6134cf7108fead7cb}{error}} () const
+\begin{DoxyCompactList}\small\item\em Returns the error text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_ad68c9451dc93dbc1541bf5c6650aa33c}\label{classTCLAP_1_1ArgException_ad68c9451dc93dbc1541bf5c6650aa33c}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_ad68c9451dc93dbc1541bf5c6650aa33c}{arg\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the argument id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a9094aa058cf1dc246a9e657353433c3e}\label{classTCLAP_1_1ArgException_a9094aa058cf1dc246a9e657353433c3e}} 
+const char $\ast$ \mbox{\hyperlink{classTCLAP_1_1ArgException_a9094aa058cf1dc246a9e657353433c3e}{what}} () const  throw ()
+\begin{DoxyCompactList}\small\item\em Returns the arg id and error text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_a9d741e0af36d049cb4f1fae71600ef9f}{type\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of the exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_ad94d68e5948f6b74aacb8b2023e96c50}\label{classTCLAP_1_1ArgException_ad94d68e5948f6b74aacb8b2023e96c50}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_ad94d68e5948f6b74aacb8b2023e96c50}{\+\_\+error\+Text}}
+\begin{DoxyCompactList}\small\item\em The text of the exception message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a6bfa7ed4e5cc1404d6b4cc5d28cb1f28}\label{classTCLAP_1_1ArgException_a6bfa7ed4e5cc1404d6b4cc5d28cb1f28}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_a6bfa7ed4e5cc1404d6b4cc5d28cb1f28}{\+\_\+arg\+Id}}
+\begin{DoxyCompactList}\small\item\em The argument related to this exception. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ArgException_a7c69e599ae4a5b874a3e19cd4cf7c910}{\+\_\+type\+Description}}
+\begin{DoxyCompactList}\small\item\em Describes the type of the exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple class that defines and argument exception. 
+
+Should be caught whenever a \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} is created and parsed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a67389912b628e95d530f8bb8de97b309}\label{classTCLAP_1_1ArgException_a67389912b628e95d530f8bb8de97b309}} 
+\index{TCLAP::ArgException@{TCLAP::ArgException}!ArgException@{ArgException}}
+\index{ArgException@{ArgException}!TCLAP::ArgException@{TCLAP::ArgException}}
+\doxysubsubsection{\texorpdfstring{ArgException()}{ArgException()}}
+{\footnotesize\ttfamily TCLAP\+::\+Arg\+Exception\+::\+Arg\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text = {\ttfamily \char`\"{}undefined~exception\char`\"{}},  }\item[{const std\+::string \&}]{id = {\ttfamily \char`\"{}undefined\char`\"{}},  }\item[{const std\+::string \&}]{td = {\ttfamily \char`\"{}Generic~\mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & -\/ The text of the exception. \\
+\hline
+{\em id} & -\/ The text identifying the argument source. \\
+\hline
+{\em td} & -\/ Text describing the type of \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} it is. of the exception. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a9d741e0af36d049cb4f1fae71600ef9f}\label{classTCLAP_1_1ArgException_a9d741e0af36d049cb4f1fae71600ef9f}} 
+\index{TCLAP::ArgException@{TCLAP::ArgException}!typeDescription@{typeDescription}}
+\index{typeDescription@{typeDescription}!TCLAP::ArgException@{TCLAP::ArgException}}
+\doxysubsubsection{\texorpdfstring{typeDescription()}{typeDescription()}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+Exception\+::type\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the type of the exception. 
+
+Used to explain and distinguish between different child exceptions. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ArgException_a7c69e599ae4a5b874a3e19cd4cf7c910}\label{classTCLAP_1_1ArgException_a7c69e599ae4a5b874a3e19cd4cf7c910}} 
+\index{TCLAP::ArgException@{TCLAP::ArgException}!\_typeDescription@{\_typeDescription}}
+\index{\_typeDescription@{\_typeDescription}!TCLAP::ArgException@{TCLAP::ArgException}}
+\doxysubsubsection{\texorpdfstring{\_typeDescription}{\_typeDescription}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+Exception\+::\+\_\+type\+Description\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Describes the type of the exception. 
+
+Used to distinguish between different child exceptions. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Arg\+Exception.\+h\end{DoxyCompactItemize}

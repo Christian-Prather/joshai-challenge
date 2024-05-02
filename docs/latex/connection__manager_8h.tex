@@ -1,0 +1,56 @@
+\hypertarget{connection__manager_8h}{}\doxysection{/home/christian/\+Documents/joshai-\/challenge/include/interface/connection\+\_\+manager.h File Reference}
+\label{connection__manager_8h}\index{/home/christian/Documents/joshai-\/challenge/include/interface/connection\_manager.h@{/home/christian/Documents/joshai-\/challenge/include/interface/connection\_manager.h}}
+
+
+This is the abstraction / wrapper over the client server connection needed to get new data. This is used so that the underlying connection protocol / library can be changed and not break the rest of the system. Examples of different methods one might use are g\+RPC, websocket, MQTT, or ROS. To swap this classes API would only need to be updated to the new call / library.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}cpp-\/httplib/httplib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nlohmann/json.\+hpp\char`\"{}}\newline
+Include dependency graph for connection\+\_\+manager.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{connection__manager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{connection__manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structServerResponse}{Server\+Response}}
+\begin{DoxyCompactList}\small\item\em A unified data structure to capture data and status coming back from the server. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classConnectionManager}{Connection\+Manager}}
+\begin{DoxyCompactList}\small\item\em The client server connection manager in charge of how the connection is established, handling server response errors, and managing if a connection should be kept alive or reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{connection__manager_8h_ab701e3ac61a85b337ec5c1abaad6742d}\label{connection__manager_8h_ab701e3ac61a85b337ec5c1abaad6742d}} 
+using {\bfseries json} = nlohmann\+::json
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the abstraction / wrapper over the client server connection needed to get new data. This is used so that the underlying connection protocol / library can be changed and not break the rest of the system. Examples of different methods one might use are g\+RPC, websocket, MQTT, or ROS. To swap this classes API would only need to be updated to the new call / library. 
+
+\begin{DoxyAuthor}{Author}
+Christian Prather 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

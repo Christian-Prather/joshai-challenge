@@ -1,0 +1,510 @@
+\hypertarget{classTCLAP_1_1Arg}{}\doxysection{TCLAP\+::Arg Class Reference}
+\label{classTCLAP_1_1Arg}\index{TCLAP::Arg@{TCLAP::Arg}}
+
+
+A virtual base class that defines the essential data for all arguments.  
+
+
+
+
+{\ttfamily \#include $<$Arg.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Arg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1Arg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Arg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classTCLAP_1_1Arg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a15734a7cf52c8c4ab6df70f0997bbee3}\label{classTCLAP_1_1Arg_a15734a7cf52c8c4ab6df70f0997bbee3}} 
+virtual \mbox{\hyperlink{classTCLAP_1_1Arg_a15734a7cf52c8c4ab6df70f0997bbee3}{$\sim$\+Arg}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1Arg_a99558be2748fa006b8bdf4cdd12534ca}{add\+To\+List}} (std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&arg\+List) const
+\begin{DoxyCompactList}\small\item\em Adds this to the specified list of Args. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}{process\+Arg}} (int $\ast$i, std\+::vector$<$ std\+::string $>$ \&args)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual method meant to handle the parsing and value assignment of the string on the command line. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_af860e26469b06349e331b308685c5d74}{operator==}} (const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&a) const
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a69b745d672e972c7db437fe0158fa890}\label{classTCLAP_1_1Arg_a69b745d672e972c7db437fe0158fa890}} 
+const std\+::string \& \mbox{\hyperlink{classTCLAP_1_1Arg_a69b745d672e972c7db437fe0158fa890}{get\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Returns the argument flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a9bd2bd8e42b75e2a5421dfc143b70bb8}\label{classTCLAP_1_1Arg_a9bd2bd8e42b75e2a5421dfc143b70bb8}} 
+const std\+::string \& \mbox{\hyperlink{classTCLAP_1_1Arg_a9bd2bd8e42b75e2a5421dfc143b70bb8}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the argument name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ab07e6da4a86c360f5a3e1a71f201fe3c}\label{classTCLAP_1_1Arg_ab07e6da4a86c360f5a3e1a71f201fe3c}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_ab07e6da4a86c360f5a3e1a71f201fe3c}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Returns the argument description. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_aec9381ca612a2d37239944b8dd512a7e}\label{classTCLAP_1_1Arg_aec9381ca612a2d37239944b8dd512a7e}} 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_aec9381ca612a2d37239944b8dd512a7e}{is\+Required}} () const
+\begin{DoxyCompactList}\small\item\em Indicates whether the argument is required. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1Arg_a58e3de560f364d0bb6bdf36ab533a6fd}{force\+Required}} ()
+\begin{DoxyCompactList}\small\item\em Sets \+\_\+required to true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1Arg_aec525c8092e56f7f5aa455e71bc72374}{xor\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Sets the \+\_\+already\+Set value to true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a7bdc92de1b8628a02a56be067ca37468}\label{classTCLAP_1_1Arg_a7bdc92de1b8628a02a56be067ca37468}} 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a7bdc92de1b8628a02a56be067ca37468}{is\+Value\+Required}} () const
+\begin{DoxyCompactList}\small\item\em Indicates whether a value must be specified for argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a15d126427847cc782cf53ab7364659df}{is\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Indicates whether the argument has already been set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a4e0a80c4d980d0cc59372382fab03413}\label{classTCLAP_1_1Arg_a4e0a80c4d980d0cc59372382fab03413}} 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a4e0a80c4d980d0cc59372382fab03413}{is\+Ignoreable}} () const
+\begin{DoxyCompactList}\small\item\em Indicates whether the argument can be ignored, if desired. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_ac7c68cefa82cce90a0e7be0b149c9407}{arg\+Matches}} (const std\+::string \&s) const
+\begin{DoxyCompactList}\small\item\em A method that tests whether a string matches this argument. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_adf04c48b5e718098b0b8d9bcb28eb706}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a simple string representation of the argument. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_af130aaa674c3531a7cea7efe31afa5df}{short\+ID}} (const std\+::string \&value\+Id=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Returns a short ID for the usage. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_a1a71b113dfa30f35551cc5b71f6389e2}{long\+ID}} (const std\+::string \&value\+Id=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Returns a long ID for the usage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1Arg_ad873684d1e1eaff4570e9066b14ba325}{trim\+Flag}} (std\+::string \&flag, std\+::string \&value) const
+\begin{DoxyCompactList}\small\item\em Trims a value off of the flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a2f7d53b03703eaec40df9cd8c02d275f}{\+\_\+has\+Blanks}} (const std\+::string \&s) const
+\begin{DoxyCompactList}\small\item\em Checks whether a given string has blank chars, indicating that it is a combined \mbox{\hyperlink{classTCLAP_1_1SwitchArg}{Switch\+Arg}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1Arg_aae5c959f31af1a484a8af06f84a6e8b0}{set\+Require\+Label}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Sets the require\+Label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a9aef735d37ef95ca1b7dc7a07850b984}\label{classTCLAP_1_1Arg_a9aef735d37ef95ca1b7dc7a07850b984}} 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_a9aef735d37ef95ca1b7dc7a07850b984}{allow\+More}} ()
+\begin{DoxyCompactList}\small\item\em Used for Multi\+Args and \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}} to determine whether args can still be set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ad356870538a255d639e26b30330202ae}\label{classTCLAP_1_1Arg_ad356870538a255d639e26b30330202ae}} 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Arg_ad356870538a255d639e26b30330202ae}{accepts\+Multiple\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Use by output classes to determine whether an \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} accepts multiple values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ab5b5dc9a9b0381561f0684523f943a2c}\label{classTCLAP_1_1Arg_ab5b5dc9a9b0381561f0684523f943a2c}} 
+virtual void \mbox{\hyperlink{classTCLAP_1_1Arg_ab5b5dc9a9b0381561f0684523f943a2c}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Clears the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} object and allows it to be reused by new command lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a24165d31c1ec70777fb201356b6cdf6a}\label{classTCLAP_1_1Arg_a24165d31c1ec70777fb201356b6cdf6a}} 
+static void \mbox{\hyperlink{classTCLAP_1_1Arg_a24165d31c1ec70777fb201356b6cdf6a}{begin\+Ignoring}} ()
+\begin{DoxyCompactList}\small\item\em Begin ignoring arguments since the \char`\"{}-\/-\/\char`\"{} argument was specified. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a4d412155b8f9b4956e64e91c48e55a3b}\label{classTCLAP_1_1Arg_a4d412155b8f9b4956e64e91c48e55a3b}} 
+static bool \mbox{\hyperlink{classTCLAP_1_1Arg_a4d412155b8f9b4956e64e91c48e55a3b}{ignore\+Rest}} ()
+\begin{DoxyCompactList}\small\item\em Whether to ignore the rest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_aadef6ca7e40f5b3d3fd03186976aea7e}\label{classTCLAP_1_1Arg_aadef6ca7e40f5b3d3fd03186976aea7e}} 
+static char \mbox{\hyperlink{classTCLAP_1_1Arg_aadef6ca7e40f5b3d3fd03186976aea7e}{delimiter}} ()
+\begin{DoxyCompactList}\small\item\em The delimiter that separates an argument flag/name from the value. \end{DoxyCompactList}\item 
+static char \mbox{\hyperlink{classTCLAP_1_1Arg_a0abd38f46dbf7d267078134a4817fbb2}{blank\+Char}} ()
+\begin{DoxyCompactList}\small\item\em The char used as a place holder when Switch\+Args are combined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a7f9f6af439993e9151bd5a6cd2a63dad}\label{classTCLAP_1_1Arg_a7f9f6af439993e9151bd5a6cd2a63dad}} 
+static char {\bfseries flag\+Start\+Char} ()
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_af8e739295b0f75028e7bff6d670d97a1}\label{classTCLAP_1_1Arg_af8e739295b0f75028e7bff6d670d97a1}} 
+static const std\+::string {\bfseries flag\+Start\+String} ()
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a1df2134870528b80f9f35347fef6fd14}\label{classTCLAP_1_1Arg_a1df2134870528b80f9f35347fef6fd14}} 
+static const std\+::string {\bfseries name\+Start\+String} ()
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a6ce0cbe4effd44679ca11f25e3c318e7}\label{classTCLAP_1_1Arg_a6ce0cbe4effd44679ca11f25e3c318e7}} 
+static const std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_a6ce0cbe4effd44679ca11f25e3c318e7}{ignore\+Name\+String}} ()
+\begin{DoxyCompactList}\small\item\em The name used to identify the ignore rest argument. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classTCLAP_1_1Arg_ad059b63424001b9aedb4c019e2854c3c}{set\+Delimiter}} (char c)
+\begin{DoxyCompactList}\small\item\em Sets the delimiter for all arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a0f4cda4e34213da82df040e162287c4b}\label{classTCLAP_1_1Arg_a0f4cda4e34213da82df040e162287c4b}} 
+void \mbox{\hyperlink{classTCLAP_1_1Arg_a0f4cda4e34213da82df040e162287c4b}{\+\_\+check\+With\+Visitor}} () const
+\begin{DoxyCompactList}\small\item\em Performs the special handling described by the \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1Arg_ab25a06db5edf82a5b965b641b3c63372}{Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, bool valreq, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Primary constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_ae68407a0a8223023ad0ae3b9dc7986f5}{\+\_\+flag}}
+\begin{DoxyCompactList}\small\item\em The single char flag used to identify the argument. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_ac0f138057a99fb5d94ff4acb41a083aa}{\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em A single word namd identifying the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a9882fe256eaab01ac53db54ac657d272}\label{classTCLAP_1_1Arg_a9882fe256eaab01ac53db54ac657d272}} 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_a9882fe256eaab01ac53db54ac657d272}{\+\_\+description}}
+\begin{DoxyCompactList}\small\item\em Description of the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ad16408bd1ca4d8b1d14d6c5129545a84}\label{classTCLAP_1_1Arg_ad16408bd1ca4d8b1d14d6c5129545a84}} 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_ad16408bd1ca4d8b1d14d6c5129545a84}{\+\_\+required}}
+\begin{DoxyCompactList}\small\item\em Indicating whether the argument is required. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1Arg_a2ed097a868e34a0c4f6062ead744ac54}{\+\_\+require\+Label}}
+\begin{DoxyCompactList}\small\item\em Label to be used in usage description. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a776682b7e19f4dc231bbad3d10034dfa}{\+\_\+value\+Required}}
+\begin{DoxyCompactList}\small\item\em Indicates whether a value is required for the argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a829e32129857d2683e5791a5df1208ec}{\+\_\+already\+Set}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the argument has been set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$ \mbox{\hyperlink{classTCLAP_1_1Arg_aa9ff037e92c9fa5bd85e532f61899300}{\+\_\+visitor}}
+\begin{DoxyCompactList}\small\item\em A pointer to a visitor object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a9832bb7564f4ab472bd51b7b1bbc683f}\label{classTCLAP_1_1Arg_a9832bb7564f4ab472bd51b7b1bbc683f}} 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_a9832bb7564f4ab472bd51b7b1bbc683f}{\+\_\+ignoreable}}
+\begin{DoxyCompactList}\small\item\em Whether this argument can be ignored, if desired. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ab413bd1d8a7ecf3c89672ee23ef791ba}\label{classTCLAP_1_1Arg_ab413bd1d8a7ecf3c89672ee23ef791ba}} 
+bool \mbox{\hyperlink{classTCLAP_1_1Arg_ab413bd1d8a7ecf3c89672ee23ef791ba}{\+\_\+xor\+Set}}
+\begin{DoxyCompactList}\small\item\em Indicates that the arg was set as part of an XOR and not on the command line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a13130a9a5d22c57a6d42a8883c9b1e0f}\label{classTCLAP_1_1Arg_a13130a9a5d22c57a6d42a8883c9b1e0f}} 
+bool {\bfseries \+\_\+accepts\+Multiple\+Values}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_aca23d0f3bd09d71f22dbe8f4504c04dc}\label{classTCLAP_1_1Arg_aca23d0f3bd09d71f22dbe8f4504c04dc}} 
+\mbox{\hyperlink{classTCLAP_1_1Arg_aca23d0f3bd09d71f22dbe8f4504c04dc}{Arg}} (const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a580ebe03ce3af1f85db2b2e5d19fb6bc}\label{classTCLAP_1_1Arg_a580ebe03ce3af1f85db2b2e5d19fb6bc}} 
+\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \& \mbox{\hyperlink{classTCLAP_1_1Arg_a580ebe03ce3af1f85db2b2e5d19fb6bc}{operator=}} (const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_afa32140f7c01f99f6a9e85deb79281e1}\label{classTCLAP_1_1Arg_afa32140f7c01f99f6a9e85deb79281e1}} 
+static bool \& \mbox{\hyperlink{classTCLAP_1_1Arg_afa32140f7c01f99f6a9e85deb79281e1}{ignore\+Rest\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em Indicates whether the rest of the arguments should be ignored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a863591150a407ff29276ac13d0058144}\label{classTCLAP_1_1Arg_a863591150a407ff29276ac13d0058144}} 
+static char \& \mbox{\hyperlink{classTCLAP_1_1Arg_a863591150a407ff29276ac13d0058144}{delimiter\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em The delimiter that separates an argument flag/name from the value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A virtual base class that defines the essential data for all arguments. 
+
+This class, or one of its existing children, must be subclassed to do anything. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ab25a06db5edf82a5b965b641b3c63372}\label{classTCLAP_1_1Arg_ab25a06db5edf82a5b965b641b3c63372}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!Arg@{Arg}}
+\index{Arg@{Arg}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{Arg()}{Arg()}}
+{\footnotesize\ttfamily TCLAP\+::\+Arg\+::\+Arg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{bool}]{valreq,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Primary constructor. 
+
+YOU (yes you) should NEVER construct an \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} directly, this is a base class that is extended by various children that are meant to be used. Use \mbox{\hyperlink{classTCLAP_1_1SwitchArg}{Switch\+Arg}}, \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}}, \mbox{\hyperlink{classTCLAP_1_1MultiArg}{Multi\+Arg}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg}{Unlabeled\+Value\+Arg}}, or \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg}{Unlabeled\+Multi\+Arg}} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The flag identifying the argument. \\
+\hline
+{\em name} & -\/ The name identifying the argument. \\
+\hline
+{\em desc} & -\/ The description of the argument, used in the usage. \\
+\hline
+{\em req} & -\/ Whether the argument is required. \\
+\hline
+{\em valreq} & -\/ Whether the a value is required for the argument. \\
+\hline
+{\em v} & -\/ The visitor checked by the argument. Defaults to NULL. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a2f7d53b03703eaec40df9cd8c02d275f}\label{classTCLAP_1_1Arg_a2f7d53b03703eaec40df9cd8c02d275f}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_hasBlanks@{\_hasBlanks}}
+\index{\_hasBlanks@{\_hasBlanks}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_hasBlanks()}{\_hasBlanks()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::\+\_\+has\+Blanks (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks whether a given string has blank chars, indicating that it is a combined \mbox{\hyperlink{classTCLAP_1_1SwitchArg}{Switch\+Arg}}. 
+
+Implementation of \+\_\+has\+Blanks.
+
+If so, return true, otherwise return false. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ string to be checked. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a99558be2748fa006b8bdf4cdd12534ca}\label{classTCLAP_1_1Arg_a99558be2748fa006b8bdf4cdd12534ca}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!addToList@{addToList}}
+\index{addToList@{addToList}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{addToList()}{addToList()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Arg\+::add\+To\+List (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$ $>$ \&}]{arg\+List }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds this to the specified list of Args. 
+
+Overridden by Args that need to added to the end of the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+List} & -\/ The list to add this to. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_a4e32724545f724f8687ae04d0871855d}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}, and \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a484acd4108fa9c6295ee0c425dc16912}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ac7c68cefa82cce90a0e7be0b149c9407}\label{classTCLAP_1_1Arg_ac7c68cefa82cce90a0e7be0b149c9407}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!argMatches@{argMatches}}
+\index{argMatches@{argMatches}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{argMatches()}{argMatches()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::arg\+Matches (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+A method that tests whether a string matches this argument. 
+
+This is generally called by the \mbox{\hyperlink{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}{process\+Arg()}} method. This method could be re-\/implemented by a child to change how arguments are specified on the command line. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ The string to be compared to the flag/name to determine whether the arg matches. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a0abd38f46dbf7d267078134a4817fbb2}\label{classTCLAP_1_1Arg_a0abd38f46dbf7d267078134a4817fbb2}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!blankChar@{blankChar}}
+\index{blankChar@{blankChar}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{blankChar()}{blankChar()}}
+{\footnotesize\ttfamily static char TCLAP\+::\+Arg\+::blank\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The char used as a place holder when Switch\+Args are combined. 
+
+Currently set to the bell char (ASCII 7). \mbox{\Hypertarget{classTCLAP_1_1Arg_a58e3de560f364d0bb6bdf36ab533a6fd}\label{classTCLAP_1_1Arg_a58e3de560f364d0bb6bdf36ab533a6fd}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!forceRequired@{forceRequired}}
+\index{forceRequired@{forceRequired}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{forceRequired()}{forceRequired()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Arg\+::force\+Required (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets \+\_\+required to true. 
+
+This is used by the \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}}. You really have no reason to ever use it. \mbox{\Hypertarget{classTCLAP_1_1Arg_a15d126427847cc782cf53ab7364659df}\label{classTCLAP_1_1Arg_a15d126427847cc782cf53ab7364659df}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!isSet@{isSet}}
+\index{isSet@{isSet}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{isSet()}{isSet()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::is\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indicates whether the argument has already been set. 
+
+Only true if the arg has been matched on the command line. \mbox{\Hypertarget{classTCLAP_1_1Arg_a1a71b113dfa30f35551cc5b71f6389e2}\label{classTCLAP_1_1Arg_a1a71b113dfa30f35551cc5b71f6389e2}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!longID@{longID}}
+\index{longID@{longID}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{longID()}{longID()}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::long\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value\+Id = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a long ID for the usage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+Id} & -\/ The value used in the id. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1ValueArg_a0e0b127b19efaef3c6c8dfbb9aba17bf}{TCLAP\+::\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_a32e4a226cbcccc28f7d6b0a571957c9e}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a81babdb1b8710712e804f288a261b2a3}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1MultiArg_af2afdcc8c926cfd16b60120a1beb2406}{TCLAP\+::\+Multi\+Arg$<$ T $>$}}, and \mbox{\hyperlink{classTCLAP_1_1MultiSwitchArg_a7a98d4af63c81da894d171bc6c8e5530}{TCLAP\+::\+Multi\+Switch\+Arg}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1Arg_af860e26469b06349e331b308685c5d74}\label{classTCLAP_1_1Arg_af860e26469b06349e331b308685c5d74}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!operator==@{operator==}}
+\index{operator==@{operator==}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Operator ==. 
+
+Equality operator. Must be virtual to handle unlabeled args. 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ The \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to be compared to this. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_afabf878693f2151f90aaacbee3a410b0}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}, and \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a97fec19fc3942f3cdd83000959ce24ad}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}\label{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!processArg@{processArg}}
+\index{processArg@{processArg}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{processArg()}{processArg()}}
+{\footnotesize\ttfamily virtual bool TCLAP\+::\+Arg\+::process\+Arg (\begin{DoxyParamCaption}\item[{int $\ast$}]{i,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method meant to handle the parsing and value assignment of the string on the command line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ Pointer the the current argument in the list. \\
+\hline
+{\em args} & -\/ Mutable list of strings. What is passed in from main. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTCLAP_1_1ValueArg_a71e6ee7c7324724b6fc067c5ffe31160}{TCLAP\+::\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_ad853d7950a659b0d4ee2cda3f61261fd}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_aa5a35665519518dcb60e53d3a4858802}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1SwitchArg_a624f98df6c4907efec95ffc353e9d08c}{TCLAP\+::\+Switch\+Arg}}, \mbox{\hyperlink{classTCLAP_1_1MultiSwitchArg_a91c3d349570f21d8af6dc90767d747a2}{TCLAP\+::\+Multi\+Switch\+Arg}}, and \mbox{\hyperlink{classTCLAP_1_1MultiArg_a344d3cf2128c510f92825e421ea667c7}{TCLAP\+::\+Multi\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1Arg_ad059b63424001b9aedb4c019e2854c3c}\label{classTCLAP_1_1Arg_ad059b63424001b9aedb4c019e2854c3c}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!setDelimiter@{setDelimiter}}
+\index{setDelimiter@{setDelimiter}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{setDelimiter()}{setDelimiter()}}
+{\footnotesize\ttfamily static void TCLAP\+::\+Arg\+::set\+Delimiter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets the delimiter for all arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The character that delimits flags/names from values. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_aae5c959f31af1a484a8af06f84a6e8b0}\label{classTCLAP_1_1Arg_aae5c959f31af1a484a8af06f84a6e8b0}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!setRequireLabel@{setRequireLabel}}
+\index{setRequireLabel@{setRequireLabel}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{setRequireLabel()}{setRequireLabel()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Arg\+::set\+Require\+Label (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the require\+Label. 
+
+Used by \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}}. You shouldn\textquotesingle{}t ever use this. 
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ Set the require\+Label to this value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_af130aaa674c3531a7cea7efe31afa5df}\label{classTCLAP_1_1Arg_af130aaa674c3531a7cea7efe31afa5df}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!shortID@{shortID}}
+\index{shortID@{shortID}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{shortID()}{shortID()}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::short\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value\+Id = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a short ID for the usage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+Id} & -\/ The value used in the id. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1ValueArg_afbc081e294f3600c652bf243c5ef3a1c}{TCLAP\+::\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_a444788470cf4883db0ce3f4054b39c6a}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1UnlabeledMultiArg_a520265204d6d7ed40ab4df29e69cb27d}{TCLAP\+::\+Unlabeled\+Multi\+Arg$<$ T $>$}}, \mbox{\hyperlink{classTCLAP_1_1MultiArg_ad4a0495acbde4b487e97bcf75688cd25}{TCLAP\+::\+Multi\+Arg$<$ T $>$}}, and \mbox{\hyperlink{classTCLAP_1_1MultiSwitchArg_a6e6bcd90fbe8c25ed74c9207d423e9d9}{TCLAP\+::\+Multi\+Switch\+Arg}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1Arg_adf04c48b5e718098b0b8d9bcb28eb706}\label{classTCLAP_1_1Arg_adf04c48b5e718098b0b8d9bcb28eb706}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!toString@{toString}}
+\index{toString@{toString}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a simple string representation of the argument. 
+
+Primarily for debugging. \mbox{\Hypertarget{classTCLAP_1_1Arg_ad873684d1e1eaff4570e9066b14ba325}\label{classTCLAP_1_1Arg_ad873684d1e1eaff4570e9066b14ba325}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!trimFlag@{trimFlag}}
+\index{trimFlag@{trimFlag}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{trimFlag()}{trimFlag()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Arg\+::trim\+Flag (\begin{DoxyParamCaption}\item[{std\+::string \&}]{flag,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Trims a value off of the flag. 
+
+Implementation of trim\+Flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The string from which the flag and value will be trimmed. Contains the flag once the value has been trimmed. \\
+\hline
+{\em value} & -\/ Where the value trimmed from the string will be stored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_aec525c8092e56f7f5aa455e71bc72374}\label{classTCLAP_1_1Arg_aec525c8092e56f7f5aa455e71bc72374}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!xorSet@{xorSet}}
+\index{xorSet@{xorSet}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{xorSet()}{xorSet()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Arg\+::xor\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the \+\_\+already\+Set value to true. 
+
+This is used by the \mbox{\hyperlink{classTCLAP_1_1XorHandler}{Xor\+Handler}}. You really have no reason to ever use it. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1Arg_a829e32129857d2683e5791a5df1208ec}\label{classTCLAP_1_1Arg_a829e32129857d2683e5791a5df1208ec}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_alreadySet@{\_alreadySet}}
+\index{\_alreadySet@{\_alreadySet}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_alreadySet}{\_alreadySet}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::\+\_\+already\+Set\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Indicates whether the argument has been set. 
+
+Indicates that a value on the command line has matched the name/flag of this argument and the values have been set accordingly. \mbox{\Hypertarget{classTCLAP_1_1Arg_ae68407a0a8223023ad0ae3b9dc7986f5}\label{classTCLAP_1_1Arg_ae68407a0a8223023ad0ae3b9dc7986f5}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_flag@{\_flag}}
+\index{\_flag@{\_flag}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_flag}{\_flag}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The single char flag used to identify the argument. 
+
+This value (preceded by a dash \{-\/\}), can be used to identify an argument on the command line. The \+\_\+flag can be blank, in fact this is how unlabeled args work. Unlabeled args must override appropriate functions to get correct handling. Note that the \+\_\+flag does NOT include the dash as part of the flag. \mbox{\Hypertarget{classTCLAP_1_1Arg_ac0f138057a99fb5d94ff4acb41a083aa}\label{classTCLAP_1_1Arg_ac0f138057a99fb5d94ff4acb41a083aa}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_name@{\_name}}
+\index{\_name@{\_name}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A single word namd identifying the argument. 
+
+This value (preceded by two dashed \{--\}) can also be used to identify an argument on the command line. Note that the \+\_\+name does NOT include the two dashes as part of the \+\_\+name. The \+\_\+name cannot be blank. \mbox{\Hypertarget{classTCLAP_1_1Arg_a2ed097a868e34a0c4f6062ead744ac54}\label{classTCLAP_1_1Arg_a2ed097a868e34a0c4f6062ead744ac54}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_requireLabel@{\_requireLabel}}
+\index{\_requireLabel@{\_requireLabel}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_requireLabel}{\_requireLabel}}
+{\footnotesize\ttfamily std\+::string TCLAP\+::\+Arg\+::\+\_\+require\+Label\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Label to be used in usage description. 
+
+Normally set to \char`\"{}required\char`\"{}, but can be changed when necessary. \mbox{\Hypertarget{classTCLAP_1_1Arg_a776682b7e19f4dc231bbad3d10034dfa}\label{classTCLAP_1_1Arg_a776682b7e19f4dc231bbad3d10034dfa}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_valueRequired@{\_valueRequired}}
+\index{\_valueRequired@{\_valueRequired}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_valueRequired}{\_valueRequired}}
+{\footnotesize\ttfamily bool TCLAP\+::\+Arg\+::\+\_\+value\+Required\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Indicates whether a value is required for the argument. 
+
+Note that the value may be required but the argument/value combination may not be, as specified by \+\_\+required. \mbox{\Hypertarget{classTCLAP_1_1Arg_aa9ff037e92c9fa5bd85e532f61899300}\label{classTCLAP_1_1Arg_aa9ff037e92c9fa5bd85e532f61899300}} 
+\index{TCLAP::Arg@{TCLAP::Arg}!\_visitor@{\_visitor}}
+\index{\_visitor@{\_visitor}!TCLAP::Arg@{TCLAP::Arg}}
+\doxysubsubsection{\texorpdfstring{\_visitor}{\_visitor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}}$\ast$ TCLAP\+::\+Arg\+::\+\_\+visitor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A pointer to a visitor object. 
+
+The visitor allows special handling to occur as soon as the argument is matched. This defaults to NULL and should not be used unless absolutely necessary. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Arg.\+h\end{DoxyCompactItemize}

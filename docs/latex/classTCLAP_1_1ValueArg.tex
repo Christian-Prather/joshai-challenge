@@ -1,0 +1,346 @@
+\hypertarget{classTCLAP_1_1ValueArg}{}\doxysection{TCLAP\+::Value\+Arg$<$ T $>$ Class Template Reference}
+\label{classTCLAP_1_1ValueArg}\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+
+
+The basic labeled argument that parses a value.  
+
+
+
+
+{\ttfamily \#include $<$Value\+Arg.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Value\+Arg$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classTCLAP_1_1ValueArg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Value\+Arg$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1ValueArg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_ab2818435a1749bee3233b1f364dabf09}{Value\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, T value, const std\+::string \&type\+Desc, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_a3b34856ee6613ccabe60d2c5a6cc714f}{Value\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, T value, const std\+::string \&type\+Desc, \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&parser, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_aa054e7649b5d9db4861eed344a8f5840}{Value\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, T value, \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$constraint, \mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&parser, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_a152c816b8bdb19efada14e8aec9bd05c}{Value\+Arg}} (const std\+::string \&flag, const std\+::string \&name, const std\+::string \&desc, bool req, T value, \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$constraint, \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$v=NULL)
+\begin{DoxyCompactList}\small\item\em Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1ValueArg_a71e6ee7c7324724b6fc067c5ffe31160}{process\+Arg}} (int $\ast$i, std\+::vector$<$ std\+::string $>$ \&args)
+\begin{DoxyCompactList}\small\item\em Handles the processing of the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_abcfd865f772d3fd26cdbe4d8112b3722}\label{classTCLAP_1_1ValueArg_abcfd865f772d3fd26cdbe4d8112b3722}} 
+const T \& \mbox{\hyperlink{classTCLAP_1_1ValueArg_abcfd865f772d3fd26cdbe4d8112b3722}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Returns the value of the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a3336a88f9c07bcc440d7e6362455c45b}\label{classTCLAP_1_1ValueArg_a3336a88f9c07bcc440d7e6362455c45b}} 
+T \& {\bfseries get\+Value} ()
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_aa2718021c01ae5d9bfecfc970a455242}\label{classTCLAP_1_1ValueArg_aa2718021c01ae5d9bfecfc970a455242}} 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_aa2718021c01ae5d9bfecfc970a455242}{operator const T \&}} () const
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} can be used as as its value type (T) This is the same as calling get\+Value() \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg_afbc081e294f3600c652bf243c5ef3a1c}{short\+ID}} (const std\+::string \&val=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Specialization of short\+ID. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg_a0e0b127b19efaef3c6c8dfbb9aba17bf}{long\+ID}} (const std\+::string \&val=\char`\"{}val\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Specialization of long\+ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a1bc480b71c4d8ac3646e796af8fb6e14}\label{classTCLAP_1_1ValueArg_a1bc480b71c4d8ac3646e796af8fb6e14}} 
+virtual void \mbox{\hyperlink{classTCLAP_1_1ValueArg_a1bc480b71c4d8ac3646e796af8fb6e14}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Clears the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} object and allows it to be reused by new command lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTCLAP_1_1ValueArg_af0ecdb6537febfcaa322e7131d2b3bf8}{\+\_\+extract\+Value}} (const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em Extracts the value from the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classTCLAP_1_1ValueArg_a45d5fdfce5865c02e6663f7438d485c7}{\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em The value parsed from the command line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a118e3a7932700a8e3626d8f9ee2e0c95}\label{classTCLAP_1_1ValueArg_a118e3a7932700a8e3626d8f9ee2e0c95}} 
+T \mbox{\hyperlink{classTCLAP_1_1ValueArg_a118e3a7932700a8e3626d8f9ee2e0c95}{\+\_\+default}}
+\begin{DoxyCompactList}\small\item\em Used to support the \mbox{\hyperlink{classTCLAP_1_1ValueArg_a1bc480b71c4d8ac3646e796af8fb6e14}{reset()}} method so that \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} can be reset to their constructed value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg_a78c5e5b67ce4bcebb57c886d9aa49259}{\+\_\+type\+Desc}}
+\begin{DoxyCompactList}\small\item\em A human readable description of the type to be parsed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_aa383908cff37688cf7493d46c840d03b}\label{classTCLAP_1_1ValueArg_aa383908cff37688cf7493d46c840d03b}} 
+\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classTCLAP_1_1ValueArg_aa383908cff37688cf7493d46c840d03b}{\+\_\+constraint}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} must conform to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a22a2eb14d853d3480a7b40469e9bc38e}\label{classTCLAP_1_1ValueArg_a22a2eb14d853d3480a7b40469e9bc38e}} 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg_a22a2eb14d853d3480a7b40469e9bc38e}{Value\+Arg}} (const \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}}$<$ T $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a84e147a855fa444508c9cf25bcd09eaf}\label{classTCLAP_1_1ValueArg_a84e147a855fa444508c9cf25bcd09eaf}} 
+\mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}}$<$ T $>$ \&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class TCLAP\+::\+Value\+Arg$<$ T $>$}
+
+The basic labeled argument that parses a value. 
+
+This is a template class, which means the type T defines the type that a given object will attempt to parse when the flag/name is matched on the command line. While there is nothing stopping you from creating an unflagged \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}}, it is unwise and would cause significant problems. Instead use an \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg}{Unlabeled\+Value\+Arg}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_ab2818435a1749bee3233b1f364dabf09}\label{classTCLAP_1_1ValueArg_ab2818435a1749bee3233b1f364dabf09}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!ValueArg@{ValueArg}}
+\index{ValueArg@{ValueArg}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValueArg()}{ValueArg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{T}]{value,  }\item[{const std\+::string \&}]{type\+Desc,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. 
+
+Constructor implementation.
+
+You could conceivably call this constructor with a blank flag, but that would make you a bad person. It would also cause an exception to be thrown. If you want an unlabeled argument, use the other constructor. 
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em value} & -\/ The default value assigned to this argument if it is not present on the command line. \\
+\hline
+{\em type\+Desc} & -\/ A short, human readable description of the type that this object expects. This is used in the generation of the USAGE statement. The goal is to be helpful to the end user of the program. \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a3b34856ee6613ccabe60d2c5a6cc714f}\label{classTCLAP_1_1ValueArg_a3b34856ee6613ccabe60d2c5a6cc714f}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!ValueArg@{ValueArg}}
+\index{ValueArg@{ValueArg}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValueArg()}{ValueArg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{T}]{value,  }\item[{const std\+::string \&}]{type\+Desc,  }\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{parser,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. 
+
+You could conceivably call this constructor with a blank flag, but that would make you a bad person. It would also cause an exception to be thrown. If you want an unlabeled argument, use the other constructor. 
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em value} & -\/ The default value assigned to this argument if it is not present on the command line. \\
+\hline
+{\em type\+Desc} & -\/ A short, human readable description of the type that this object expects. This is used in the generation of the USAGE statement. The goal is to be helpful to the end user of the program. \\
+\hline
+{\em parser} & -\/ A \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} parser object to add this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_aa054e7649b5d9db4861eed344a8f5840}\label{classTCLAP_1_1ValueArg_aa054e7649b5d9db4861eed344a8f5840}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!ValueArg@{ValueArg}}
+\index{ValueArg@{ValueArg}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValueArg()}{ValueArg()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{T}]{value,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$}]{constraint,  }\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{parser,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. 
+
+You could conceivably call this constructor with a blank flag, but that would make you a bad person. It would also cause an exception to be thrown. If you want an unlabeled argument, use the other constructor. 
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em value} & -\/ The default value assigned to this argument if it is not present on the command line. \\
+\hline
+{\em constraint} & -\/ A pointer to a \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} object used to constrain this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}. \\
+\hline
+{\em parser} & -\/ A \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} parser object to add this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} to. \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a152c816b8bdb19efada14e8aec9bd05c}\label{classTCLAP_1_1ValueArg_a152c816b8bdb19efada14e8aec9bd05c}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!ValueArg@{ValueArg}}
+\index{ValueArg@{ValueArg}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValueArg()}{ValueArg()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{flag,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{desc,  }\item[{bool}]{req,  }\item[{T}]{value,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$}]{constraint,  }\item[{\mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} $\ast$}]{v = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Labeled \mbox{\hyperlink{classTCLAP_1_1ValueArg}{Value\+Arg}} constructor. 
+
+You could conceivably call this constructor with a blank flag, but that would make you a bad person. It would also cause an exception to be thrown. If you want an unlabeled argument, use the other constructor. 
+\begin{DoxyParams}{Parameters}
+{\em flag} & -\/ The one character flag that identifies this argument on the command line. \\
+\hline
+{\em name} & -\/ A one word name for the argument. Can be used as a long flag on the command line. \\
+\hline
+{\em desc} & -\/ A description of what the argument is for or does. \\
+\hline
+{\em req} & -\/ Whether the argument is required on the command line. \\
+\hline
+{\em value} & -\/ The default value assigned to this argument if it is not present on the command line. \\
+\hline
+{\em constraint} & -\/ A pointer to a \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} object used to constrain this \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}}. \\
+\hline
+{\em v} & -\/ An optional visitor. You probably should not use this unless you have a very good reason. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_af0ecdb6537febfcaa322e7131d2b3bf8}\label{classTCLAP_1_1ValueArg_af0ecdb6537febfcaa322e7131d2b3bf8}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!\_extractValue@{\_extractValue}}
+\index{\_extractValue@{\_extractValue}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_extractValue()}{\_extractValue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\+\_\+extract\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Extracts the value from the string. 
+
+Attempts to parse string as type T, if this fails an exception is thrown. 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ value to be parsed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a0e0b127b19efaef3c6c8dfbb9aba17bf}\label{classTCLAP_1_1ValueArg_a0e0b127b19efaef3c6c8dfbb9aba17bf}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!longID@{longID}}
+\index{longID@{longID}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{longID()}{longID()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::long\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Specialization of long\+ID. 
+
+Implementation of long\+ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ value to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTCLAP_1_1Arg_a1a71b113dfa30f35551cc5b71f6389e2}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_a32e4a226cbcccc28f7d6b0a571957c9e}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a71e6ee7c7324724b6fc067c5ffe31160}\label{classTCLAP_1_1ValueArg_a71e6ee7c7324724b6fc067c5ffe31160}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!processArg@{processArg}}
+\index{processArg@{processArg}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{processArg()}{processArg()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::process\+Arg (\begin{DoxyParamCaption}\item[{int $\ast$}]{i,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the processing of the argument. 
+
+Implementation of \mbox{\hyperlink{classTCLAP_1_1ValueArg_a71e6ee7c7324724b6fc067c5ffe31160}{process\+Arg()}}.
+
+This re-\/implements the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} version of this method to set the \+\_\+value of the argument appropriately. It knows the difference between labeled and unlabeled. 
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ Pointer the the current argument in the list. \\
+\hline
+{\em args} & -\/ Mutable list of strings. Passed in from main(). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1Arg_a61ffe2f660a76111d256f7b22a686146}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_ad853d7950a659b0d4ee2cda3f61261fd}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_afbc081e294f3600c652bf243c5ef3a1c}\label{classTCLAP_1_1ValueArg_afbc081e294f3600c652bf243c5ef3a1c}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!shortID@{shortID}}
+\index{shortID@{shortID}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shortID()}{shortID()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::short\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{val = {\ttfamily \char`\"{}val\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Specialization of short\+ID. 
+
+Implementation of short\+ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ value to be used. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTCLAP_1_1Arg_af130aaa674c3531a7cea7efe31afa5df}{TCLAP\+::\+Arg}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTCLAP_1_1UnlabeledValueArg_a444788470cf4883db0ce3f4054b39c6a}{TCLAP\+::\+Unlabeled\+Value\+Arg$<$ T $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1ValueArg_a78c5e5b67ce4bcebb57c886d9aa49259}\label{classTCLAP_1_1ValueArg_a78c5e5b67ce4bcebb57c886d9aa49259}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!\_typeDesc@{\_typeDesc}}
+\index{\_typeDesc@{\_typeDesc}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_typeDesc}{\_typeDesc}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\+\_\+type\+Desc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A human readable description of the type to be parsed. 
+
+This is a hack, plain and simple. Ideally we would use RTTI to return the name of type T, but until there is some sort of consistent support for human readable names, we are left to our own devices. \mbox{\Hypertarget{classTCLAP_1_1ValueArg_a45d5fdfce5865c02e6663f7438d485c7}\label{classTCLAP_1_1ValueArg_a45d5fdfce5865c02e6663f7438d485c7}} 
+\index{TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}!\_value@{\_value}}
+\index{\_value@{\_value}!TCLAP::ValueArg$<$ T $>$@{TCLAP::ValueArg$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_value}{\_value}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classTCLAP_1_1ValueArg}{TCLAP\+::\+Value\+Arg}}$<$ T $>$\+::\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The value parsed from the command line. 
+
+Can be of any type, as long as the $>$$>$ operator for the type is defined. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Value\+Arg.\+h\end{DoxyCompactItemize}

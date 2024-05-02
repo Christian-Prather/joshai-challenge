@@ -1,0 +1,88 @@
+\hypertarget{classTCLAP_1_1Constraint}{}\doxysection{TCLAP\+::Constraint$<$ T $>$ Class Template Reference}
+\label{classTCLAP_1_1Constraint}\index{TCLAP::Constraint$<$ T $>$@{TCLAP::Constraint$<$ T $>$}}
+
+
+The interface that defines the interaction between the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} and \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}.  
+
+
+
+
+{\ttfamily \#include $<$Constraint.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Constraint$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classTCLAP_1_1Constraint__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Constraint_ae16dd80aa217fb56c0862af5478afe01}\label{classTCLAP_1_1Constraint_ae16dd80aa217fb56c0862af5478afe01}} 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1Constraint_ae16dd80aa217fb56c0862af5478afe01}{description}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a description of the \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1Constraint_a39f707895311da682439810a0bec4a5f}\label{classTCLAP_1_1Constraint_a39f707895311da682439810a0bec4a5f}} 
+virtual std\+::string \mbox{\hyperlink{classTCLAP_1_1Constraint_a39f707895311da682439810a0bec4a5f}{short\+ID}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the short ID for the \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Constraint_a773c3e16d0150523c1c92b7b24868c34}{check}} (const T \&value) const =0
+\begin{DoxyCompactList}\small\item\em The method used to verify that the value parsed from the command line meets the constraint. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTCLAP_1_1Constraint_ae96bbe5301e9517b68b1597b36098224}{$\sim$\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1Constraint_a9614770a97eeb5de3c62231ae2b45346}\label{classTCLAP_1_1Constraint_a9614770a97eeb5de3c62231ae2b45346}} 
+static std\+::string {\bfseries short\+ID} (\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}$<$ T $>$ $\ast$constraint)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class TCLAP\+::\+Constraint$<$ T $>$}
+
+The interface that defines the interaction between the \mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} and \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1Constraint_ae96bbe5301e9517b68b1597b36098224}\label{classTCLAP_1_1Constraint_ae96bbe5301e9517b68b1597b36098224}} 
+\index{TCLAP::Constraint$<$ T $>$@{TCLAP::Constraint$<$ T $>$}!````~Constraint@{$\sim$Constraint}}
+\index{````~Constraint@{$\sim$Constraint}!TCLAP::Constraint$<$ T $>$@{TCLAP::Constraint$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Constraint()}{~Constraint()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual \mbox{\hyperlink{classTCLAP_1_1Constraint}{TCLAP\+::\+Constraint}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Silences warnings about \mbox{\hyperlink{classTCLAP_1_1Constraint}{Constraint}} being a base class with virtual functions but without a virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1Constraint_a773c3e16d0150523c1c92b7b24868c34}\label{classTCLAP_1_1Constraint_a773c3e16d0150523c1c92b7b24868c34}} 
+\index{TCLAP::Constraint$<$ T $>$@{TCLAP::Constraint$<$ T $>$}!check@{check}}
+\index{check@{check}!TCLAP::Constraint$<$ T $>$@{TCLAP::Constraint$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual bool \mbox{\hyperlink{classTCLAP_1_1Constraint}{TCLAP\+::\+Constraint}}$<$ T $>$\+::check (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The method used to verify that the value parsed from the command line meets the constraint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ The value that will be checked. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTCLAP_1_1ValuesConstraint_a744f1a5dd05c7210de8eb2452adb01e4}{TCLAP\+::\+Values\+Constraint$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Constraint.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser}{}\doxysection{httplib\+::detail\+::Multipart\+Form\+Data\+Parser Class Reference}
+\label{classhttplib_1_1detail_1_1MultipartFormDataParser}\index{httplib::detail::MultipartFormDataParser@{httplib::detail::MultipartFormDataParser}}
+
+
+Collaboration diagram for httplib\+::detail\+::Multipart\+Form\+Data\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhttplib_1_1detail_1_1MultipartFormDataParser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a58af0ae22ba5dcb352365dd3e277b0fe}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a58af0ae22ba5dcb352365dd3e277b0fe}} 
+void {\bfseries set\+\_\+boundary} (std\+::string \&\&boundary)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a48c95a9bd0a1724cbbee8d1dfda7d7af}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a48c95a9bd0a1724cbbee8d1dfda7d7af}} 
+bool {\bfseries is\+\_\+valid} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a07ea9b252463277e35c5a7114ba7e332}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a07ea9b252463277e35c5a7114ba7e332}} 
+bool {\bfseries parse} (const char $\ast$buf, size\+\_\+t n, const Content\+Receiver \&content\+\_\+callback, const Multipart\+Content\+Header \&header\+\_\+callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_ac6d1ed06f7abafc1d33cbe17769a3f17}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_ac6d1ed06f7abafc1d33cbe17769a3f17}} 
+void {\bfseries clear\+\_\+file\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a62d9f26d19a7a37edc3807079bd04bc7}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a62d9f26d19a7a37edc3807079bd04bc7}} 
+bool {\bfseries start\+\_\+with\+\_\+case\+\_\+ignore} (const std\+::string \&a, const std\+::string \&b) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a67f5d1131f4c24e3eb2b17f3f956cb77}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a67f5d1131f4c24e3eb2b17f3f956cb77}} 
+bool {\bfseries start\+\_\+with} (const std\+::string \&a, size\+\_\+t spos, size\+\_\+t epos, const std\+::string \&b) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a30b457a0940ca44890186973b7025601}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a30b457a0940ca44890186973b7025601}} 
+size\+\_\+t {\bfseries buf\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a6f28439607ff59077c67a3b53de471b5}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a6f28439607ff59077c67a3b53de471b5}} 
+const char $\ast$ {\bfseries buf\+\_\+data} () const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_add5a54a13a26ca873378a9585f23e0a4}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_add5a54a13a26ca873378a9585f23e0a4}} 
+std\+::string {\bfseries buf\+\_\+head} (size\+\_\+t l) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a24a66796128de2f316dc5b515da84371}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a24a66796128de2f316dc5b515da84371}} 
+bool {\bfseries buf\+\_\+start\+\_\+with} (const std\+::string \&s) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a354e513c2e106b5d0a41ba1b4c72a227}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a354e513c2e106b5d0a41ba1b4c72a227}} 
+size\+\_\+t {\bfseries buf\+\_\+find} (const std\+::string \&s) const
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a3eba1488ca14ea5090cb8ee1db26bef7}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a3eba1488ca14ea5090cb8ee1db26bef7}} 
+void {\bfseries buf\+\_\+append} (const char $\ast$data, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a68a83e0ad891b1ad8267afde20f80989}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a68a83e0ad891b1ad8267afde20f80989}} 
+void {\bfseries buf\+\_\+erase} (size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a97a3f301353e7b59fc43b6f7cdc62eb2}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a97a3f301353e7b59fc43b6f7cdc62eb2}} 
+const std\+::string {\bfseries dash\+\_\+} = \char`\"{}-\/-\/\char`\"{}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_aa08c7873f5d2097d6f3841b2d8b31916}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_aa08c7873f5d2097d6f3841b2d8b31916}} 
+const std\+::string {\bfseries crlf\+\_\+} = \char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a3feb2692eb5f6a0ff1daf30f4e9614a8}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a3feb2692eb5f6a0ff1daf30f4e9614a8}} 
+std\+::string {\bfseries boundary\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a7cdc43a82f710b539b33ed3ddedaf577}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a7cdc43a82f710b539b33ed3ddedaf577}} 
+std\+::string {\bfseries dash\+\_\+boundary\+\_\+crlf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a5cc4d1c983e2c07c89329bb5edf5f950}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a5cc4d1c983e2c07c89329bb5edf5f950}} 
+std\+::string {\bfseries crlf\+\_\+dash\+\_\+boundary\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a5bad13eacf08bfe4897243f109620299}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a5bad13eacf08bfe4897243f109620299}} 
+size\+\_\+t {\bfseries state\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_acdd90b49b011bbf20d9dc74f56d9737a}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_acdd90b49b011bbf20d9dc74f56d9737a}} 
+bool {\bfseries is\+\_\+valid\+\_\+} = false
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a79b8cdc2b3e01cafb261263158f194f8}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a79b8cdc2b3e01cafb261263158f194f8}} 
+\mbox{\hyperlink{structhttplib_1_1MultipartFormData}{Multipart\+Form\+Data}} {\bfseries file\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a40f5cf8b2bd9910bdebf5df521e6a243}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a40f5cf8b2bd9910bdebf5df521e6a243}} 
+std\+::string {\bfseries buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a0417b7ee15f21ad672088f6c31120c82}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a0417b7ee15f21ad672088f6c31120c82}} 
+size\+\_\+t {\bfseries buf\+\_\+spos\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1MultipartFormDataParser_a806436487dcc3755251c08ab1f9a45a9}\label{classhttplib_1_1detail_1_1MultipartFormDataParser_a806436487dcc3755251c08ab1f9a45a9}} 
+size\+\_\+t {\bfseries buf\+\_\+epos\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/cpp-\/httplib/httplib.\+h\end{DoxyCompactItemize}

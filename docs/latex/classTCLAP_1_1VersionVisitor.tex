@@ -1,0 +1,85 @@
+\hypertarget{classTCLAP_1_1VersionVisitor}{}\doxysection{TCLAP\+::Version\+Visitor Class Reference}
+\label{classTCLAP_1_1VersionVisitor}\index{TCLAP::VersionVisitor@{TCLAP::VersionVisitor}}
+
+
+A \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} that will call the version method of the given \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} for the specified \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object and then exit.  
+
+
+
+
+{\ttfamily \#include $<$Version\+Visitor.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Version\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classTCLAP_1_1VersionVisitor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Version\+Visitor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTCLAP_1_1VersionVisitor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTCLAP_1_1VersionVisitor_a6e5c16f245e2333dcc568dc9c4e6d537}{Version\+Visitor}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} $\ast$cmd, \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$$\ast$out)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_a30b0d5bd22ac41364d027b94bded4fc0}\label{classTCLAP_1_1VersionVisitor_a30b0d5bd22ac41364d027b94bded4fc0}} 
+void \mbox{\hyperlink{classTCLAP_1_1VersionVisitor_a30b0d5bd22ac41364d027b94bded4fc0}{visit}} ()
+\begin{DoxyCompactList}\small\item\em Calls the version method of the output object using the specified \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_ac789d900e73daa8b4b53a1e9b80b756e}\label{classTCLAP_1_1VersionVisitor_ac789d900e73daa8b4b53a1e9b80b756e}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} $\ast$ \mbox{\hyperlink{classTCLAP_1_1VersionVisitor_ac789d900e73daa8b4b53a1e9b80b756e}{\+\_\+cmd}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} of interest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_ab4c9f44a2bd62830e42f79b35ac4d300}\label{classTCLAP_1_1VersionVisitor_ab4c9f44a2bd62830e42f79b35ac4d300}} 
+\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$$\ast$ \mbox{\hyperlink{classTCLAP_1_1VersionVisitor_ab4c9f44a2bd62830e42f79b35ac4d300}{\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em The output object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_ac1c61a253ad1b1edc0c896a6a1c54f9b}\label{classTCLAP_1_1VersionVisitor_ac1c61a253ad1b1edc0c896a6a1c54f9b}} 
+\mbox{\hyperlink{classTCLAP_1_1VersionVisitor_ac1c61a253ad1b1edc0c896a6a1c54f9b}{Version\+Visitor}} (const \mbox{\hyperlink{classTCLAP_1_1VersionVisitor}{Version\+Visitor}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Prevent accidental copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_a9f36920293e2e6c639e4abfeb9b3eea6}\label{classTCLAP_1_1VersionVisitor_a9f36920293e2e6c639e4abfeb9b3eea6}} 
+\mbox{\hyperlink{classTCLAP_1_1VersionVisitor}{Version\+Visitor}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTCLAP_1_1VersionVisitor}{Version\+Visitor}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classTCLAP_1_1Visitor}{Visitor}} that will call the version method of the given \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} for the specified \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object and then exit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1VersionVisitor_a6e5c16f245e2333dcc568dc9c4e6d537}\label{classTCLAP_1_1VersionVisitor_a6e5c16f245e2333dcc568dc9c4e6d537}} 
+\index{TCLAP::VersionVisitor@{TCLAP::VersionVisitor}!VersionVisitor@{VersionVisitor}}
+\index{VersionVisitor@{VersionVisitor}!TCLAP::VersionVisitor@{TCLAP::VersionVisitor}}
+\doxysubsubsection{\texorpdfstring{VersionVisitor()}{VersionVisitor()}}
+{\footnotesize\ttfamily TCLAP\+::\+Version\+Visitor\+::\+Version\+Visitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} $\ast$}]{cmd,  }\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineOutput}{Cmd\+Line\+Output}} $\ast$$\ast$}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} the output is generated for. \\
+\hline
+{\em out} & -\/ The type of output. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Version\+Visitor.\+h\end{DoxyCompactItemize}

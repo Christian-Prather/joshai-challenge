@@ -1,0 +1,52 @@
+\hypertarget{classTCLAP_1_1ArgTraits}{}\doxysection{TCLAP\+::Arg\+Traits$<$ T $>$ Class Template Reference}
+\label{classTCLAP_1_1ArgTraits}\index{TCLAP::ArgTraits$<$ T $>$@{TCLAP::ArgTraits$<$ T $>$}}
+
+
+\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} traits are used to get compile type specialization when parsing argument values.  
+
+
+
+
+{\ttfamily \#include $<$Arg\+Traits.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTCLAP_1_1ArgTraits_1_1DefaultArgTrait}{Default\+Arg\+Trait}}
+\item 
+struct \mbox{\hyperlink{structTCLAP_1_1ArgTraits_1_1DefaultArgTrait_3_01C_00_01true_01_4}{Default\+Arg\+Trait$<$ C, true $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgTraits_a78f0dc73dcabbecc4893038196670745}\label{classTCLAP_1_1ArgTraits_a78f0dc73dcabbecc4893038196670745}} 
+typedef \mbox{\hyperlink{structTCLAP_1_1ArgTraits_1_1DefaultArgTrait}{Default\+Arg\+Trait}}$<$ T, has\+Trait $>$\+::\mbox{\hyperlink{structTCLAP_1_1ValueLike}{Value\+Category}} {\bfseries Value\+Category}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgTraits_a6a77b38db7e46562f6b3f2c50186afb8}\label{classTCLAP_1_1ArgTraits_a6a77b38db7e46562f6b3f2c50186afb8}} 
+{\footnotesize template$<$typename C $>$ }\\static short {\bfseries test} (typename C\+::\+Value\+Category $\ast$)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgTraits_a8350f28e431831201b64fd8732862d78}\label{classTCLAP_1_1ArgTraits_a8350f28e431831201b64fd8732862d78}} 
+{\footnotesize template$<$typename C $>$ }\\static long {\bfseries test} (...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1ArgTraits_ad81d7d975c4947c39ffbf1fae048054b}\label{classTCLAP_1_1ArgTraits_ad81d7d975c4947c39ffbf1fae048054b}} 
+static const bool {\bfseries has\+Trait} = sizeof(test$<$T$>$(0)) == sizeof(short)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class TCLAP\+::\+Arg\+Traits$<$ T $>$}
+
+\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} traits are used to get compile type specialization when parsing argument values. 
+
+Using an \mbox{\hyperlink{classTCLAP_1_1ArgTraits}{Arg\+Traits}} you can specify the way that values gets assigned to any particular type during parsing. The two supported types are \mbox{\hyperlink{structTCLAP_1_1StringLike}{String\+Like}} and \mbox{\hyperlink{structTCLAP_1_1ValueLike}{Value\+Like}}. \mbox{\hyperlink{structTCLAP_1_1ValueLike}{Value\+Like}} is the default and means that operator$>$$>$ will be used to assign values to the type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Arg\+Traits.\+h\end{DoxyCompactItemize}

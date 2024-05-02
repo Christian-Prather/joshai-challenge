@@ -1,0 +1,156 @@
+\hypertarget{classDataStore}{}\doxysection{Data\+Store$<$ T $>$ Class Template Reference}
+\label{classDataStore}\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+
+
+The data store class responsible to handling all data received from the server and providing it to all subsystems.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+store.\+h$>$}
+
+
+
+Collaboration diagram for Data\+Store$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classDataStore__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataStore_a3fd1bdce13e3f4e89f99b2e932d3d916}\label{classDataStore_a3fd1bdce13e3f4e89f99b2e932d3d916}} 
+\mbox{\hyperlink{classDataStore_a3fd1bdce13e3f4e89f99b2e932d3d916}{Data\+Store}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataStore_af50045d399cd7c0a6793636990949cf6}{add\+Inital\+Device}} (T device)
+\begin{DoxyCompactList}\small\item\em Add the initial devices to data store for later comparisons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataStore_a3068e9cb342eb3b4012a8ef90180695d}{update\+Data}} (std\+::unordered\+\_\+map$<$ std\+::string, T $>$ new\+Record)
+\begin{DoxyCompactList}\small\item\em Updates the current record with the most recent one from the server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataStore_a237c60e26e26f3c58824a8037491b874}{new\+Entry}} (std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Checks if a device is newly added. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classDataStore_a048fffe9bc65f8c25925c30a965b0c08}{get\+Record}} (std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Get a specific device record. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, T $>$ \& \mbox{\hyperlink{classDataStore_a101da667ab22fbb31bf0a409b45d3f9b}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get all the past records from the server (every device) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataStore_ac0ee9ee22584e5ad94451ddd1ffc2d0f}\label{classDataStore_ac0ee9ee22584e5ad94451ddd1ffc2d0f}} 
+std\+::unordered\+\_\+map$<$ std\+::string, T $>$ \mbox{\hyperlink{classDataStore_ac0ee9ee22584e5ad94451ddd1ffc2d0f}{records}}
+\begin{DoxyCompactList}\small\item\em Hashmap of devices using device id as key, done for quick access and lookup time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Data\+Store$<$ T $>$}
+
+The data store class responsible to handling all data received from the server and providing it to all subsystems. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataStore_af50045d399cd7c0a6793636990949cf6}\label{classDataStore_af50045d399cd7c0a6793636990949cf6}} 
+\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}!addInitalDevice@{addInitalDevice}}
+\index{addInitalDevice@{addInitalDevice}!DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addInitalDevice()}{addInitalDevice()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ T $>$\+::add\+Inital\+Device (\begin{DoxyParamCaption}\item[{T}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add the initial devices to data store for later comparisons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataStore_a101da667ab22fbb31bf0a409b45d3f9b}\label{classDataStore_a101da667ab22fbb31bf0a409b45d3f9b}} 
+\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}!getData@{getData}}
+\index{getData@{getData}!DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, T$>$\& \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ T $>$\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all the past records from the server (every device) 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$std\+::string, $<$\+Device Type$>$$>$ unique device id keyed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataStore_a048fffe9bc65f8c25925c30a965b0c08}\label{classDataStore_a048fffe9bc65f8c25925c30a965b0c08}} 
+\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}!getRecord@{getRecord}}
+\index{getRecord@{getRecord}!DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getRecord()}{getRecord()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ T $>$\+::get\+Record (\begin{DoxyParamCaption}\item[{std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a specific device record. 
+
+\begin{DoxyVerb}   @brief Checks if an existing device has had its values modified
+
+   @param id Device unique id
+   @param newHash Device unique hash based on member values
+   @return true Device has been modifiedstringthe device has been seen before
+    auto oldDeviceRecord = this->getRecord(id);
+    if (newHash != oldDeviceRecord.hashString)
+    {
+\end{DoxyVerb}
+ Hash strings dont match so devices are not the same values return true; \} return false; \}
+
+/$\ast$$\ast$
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Device in question\textquotesingle{}s unique id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T device type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataStore_a237c60e26e26f3c58824a8037491b874}\label{classDataStore_a237c60e26e26f3c58824a8037491b874}} 
+\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}!newEntry@{newEntry}}
+\index{newEntry@{newEntry}!DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{newEntry()}{newEntry()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ T $>$\+::new\+Entry (\begin{DoxyParamCaption}\item[{std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if a device is newly added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Device unique id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Device is new 
+
+false Device was already added to the server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataStore_a3068e9cb342eb3b4012a8ef90180695d}\label{classDataStore_a3068e9cb342eb3b4012a8ef90180695d}} 
+\index{DataStore$<$ T $>$@{DataStore$<$ T $>$}!updateData@{updateData}}
+\index{updateData@{updateData}!DataStore$<$ T $>$@{DataStore$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{updateData()}{updateData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDataStore}{Data\+Store}}$<$ T $>$\+::update\+Data (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, T $>$}]{new\+Record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the current record with the most recent one from the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Record} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/include/interface/\mbox{\hyperlink{data__store_8h}{data\+\_\+store.\+h}}\end{DoxyCompactItemize}

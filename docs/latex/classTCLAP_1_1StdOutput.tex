@@ -1,0 +1,176 @@
+\hypertarget{classTCLAP_1_1StdOutput}{}\doxysection{TCLAP\+::Std\+Output Class Reference}
+\label{classTCLAP_1_1StdOutput}\index{TCLAP::StdOutput@{TCLAP::StdOutput}}
+
+
+A class that isolates any output from the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object so that it may be easily modified.  
+
+
+
+
+{\ttfamily \#include $<$Std\+Output.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Std\+Output\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classTCLAP_1_1StdOutput__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Std\+Output\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classTCLAP_1_1StdOutput__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1StdOutput_aeb10eb400e0ee45f2cde689bef606b49}{usage}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)
+\begin{DoxyCompactList}\small\item\em Prints the usage to stdout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1StdOutput_a768111a59af4753ac6e5ace3ec99482e}{version}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)
+\begin{DoxyCompactList}\small\item\em Prints the version to stdout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1StdOutput_a9afc267e012c3ac42c8b1afe01f98556}{failure}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c, \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&e)
+\begin{DoxyCompactList}\small\item\em Prints (to stderr) an error message, short usage Can be overridden to produce alternative behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTCLAP_1_1StdOutput_aabbb4a2c1fbd700a7d65d64c40db9d01}{\+\_\+short\+Usage}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c, std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Writes a brief usage message with short args. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1StdOutput_abe16284c27561d8bbb77c2665b5909fc}{\+\_\+long\+Usage}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c, std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Writes a longer usage message with long and short args, provides descriptions and prints message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTCLAP_1_1StdOutput_a197b3dfda80fa823e21d7c90186e0318}{space\+Print}} (std\+::ostream \&os, const std\+::string \&s, int max\+Width, int indent\+Spaces, int second\+Line\+Offset) const
+\begin{DoxyCompactList}\small\item\em This function inserts line breaks and indents long strings according the params input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that isolates any output from the \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object so that it may be easily modified. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_abe16284c27561d8bbb77c2665b5909fc}\label{classTCLAP_1_1StdOutput_abe16284c27561d8bbb77c2665b5909fc}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!\_longUsage@{\_longUsage}}
+\index{\_longUsage@{\_longUsage}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{\_longUsage()}{\_longUsage()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::\+\_\+long\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Writes a longer usage message with long and short args, provides descriptions and prints message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+{\em os} & -\/ The stream to write the message to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_aabbb4a2c1fbd700a7d65d64c40db9d01}\label{classTCLAP_1_1StdOutput_aabbb4a2c1fbd700a7d65d64c40db9d01}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!\_shortUsage@{\_shortUsage}}
+\index{\_shortUsage@{\_shortUsage}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{\_shortUsage()}{\_shortUsage()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::\+\_\+short\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Writes a brief usage message with short args. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+{\em os} & -\/ The stream to write the message to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_a9afc267e012c3ac42c8b1afe01f98556}\label{classTCLAP_1_1StdOutput_a9afc267e012c3ac42c8b1afe01f98556}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!failure@{failure}}
+\index{failure@{failure}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{failure()}{failure()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::failure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c,  }\item[{\mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints (to stderr) an error message, short usage Can be overridden to produce alternative behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+{\em e} & -\/ The \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} that caused the failure. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ad23a57ac3d8d957a4328fc78aec94e16}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_a197b3dfda80fa823e21d7c90186e0318}\label{classTCLAP_1_1StdOutput_a197b3dfda80fa823e21d7c90186e0318}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!spacePrint@{spacePrint}}
+\index{spacePrint@{spacePrint}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{spacePrint()}{spacePrint()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::space\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::string \&}]{s,  }\item[{int}]{max\+Width,  }\item[{int}]{indent\+Spaces,  }\item[{int}]{second\+Line\+Offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+This function inserts line breaks and indents long strings according the params input. 
+
+It will only break lines at spaces, commas and pipes. 
+\begin{DoxyParams}{Parameters}
+{\em os} & -\/ The stream to be printed to. \\
+\hline
+{\em s} & -\/ The string to be printed. \\
+\hline
+{\em max\+Width} & -\/ The max\+Width allowed for the output line. \\
+\hline
+{\em indent\+Spaces} & -\/ The number of spaces to indent the first line. \\
+\hline
+{\em second\+Line\+Offset} & -\/ The number of spaces to indent the second and all subsequent lines in addition to indent\+Spaces. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_aeb10eb400e0ee45f2cde689bef606b49}\label{classTCLAP_1_1StdOutput_aeb10eb400e0ee45f2cde689bef606b49}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!usage@{usage}}
+\index{usage@{usage}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the usage to stdout. 
+
+Can be overridden to produce alternative behavior. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_a685b13db5bf6bbe5159e49169cd96bbe}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1StdOutput_a768111a59af4753ac6e5ace3ec99482e}\label{classTCLAP_1_1StdOutput_a768111a59af4753ac6e5ace3ec99482e}} 
+\index{TCLAP::StdOutput@{TCLAP::StdOutput}!version@{version}}
+\index{version@{version}!TCLAP::StdOutput@{TCLAP::StdOutput}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Std\+Output\+::version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the version to stdout. 
+
+Can be overridden to produce alternative behavior. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ae052fea473132482296de55edb3dd480}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Std\+Output.\+h\end{DoxyCompactItemize}

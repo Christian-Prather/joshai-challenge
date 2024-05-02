@@ -1,0 +1,152 @@
+\hypertarget{classTCLAP_1_1DocBookOutput}{}\doxysection{TCLAP\+::Doc\+Book\+Output Class Reference}
+\label{classTCLAP_1_1DocBookOutput}\index{TCLAP::DocBookOutput@{TCLAP::DocBookOutput}}
+
+
+A class that generates Doc\+Book output for \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}{usage()}} method for the given \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} and its Args.  
+
+
+
+
+{\ttfamily \#include $<$Doc\+Book\+Output.\+h$>$}
+
+
+
+Inheritance diagram for TCLAP\+::Doc\+Book\+Output\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTCLAP_1_1DocBookOutput__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCLAP\+::Doc\+Book\+Output\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTCLAP_1_1DocBookOutput__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}{usage}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)
+\begin{DoxyCompactList}\small\item\em Prints the usage to stdout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_a3ccf7671dcae82aba5f0e91850ae25a4}{version}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c)
+\begin{DoxyCompactList}\small\item\em Prints the version to stdout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_a5e97f659fa1ab3b060a31e8bd7a0a40e}{failure}} (\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&c, \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&e)
+\begin{DoxyCompactList}\small\item\em Prints (to stderr) an error message, short usage Can be overridden to produce alternative behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_a7546eaf3a0effeea1030afb27b4c698f}{substitute\+Special\+Chars}} (std\+::string \&s, char r, std\+::string \&x)
+\begin{DoxyCompactList}\small\item\em Substitutes the char r for string x in string s. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_abc059536cb97c49da4e6c5b4a22c6cef}\label{classTCLAP_1_1DocBookOutput_abc059536cb97c49da4e6c5b4a22c6cef}} 
+void {\bfseries remove\+Char} (std\+::string \&s, char r)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a82d49ab25845c7d191863be9c482409e}\label{classTCLAP_1_1DocBookOutput_a82d49ab25845c7d191863be9c482409e}} 
+void {\bfseries basename} (std\+::string \&s)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a980ecacfcda0186a76bb6c37a9c33726}\label{classTCLAP_1_1DocBookOutput_a980ecacfcda0186a76bb6c37a9c33726}} 
+void {\bfseries print\+Short\+Arg} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$it)
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a891cf5ef71592b5261691575c2adad1d}\label{classTCLAP_1_1DocBookOutput_a891cf5ef71592b5261691575c2adad1d}} 
+void {\bfseries print\+Long\+Arg} (\mbox{\hyperlink{classTCLAP_1_1Arg}{Arg}} $\ast$it)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a081a02a93ce13f694d078c79fe42a7c8}\label{classTCLAP_1_1DocBookOutput_a081a02a93ce13f694d078c79fe42a7c8}} 
+char {\bfseries the\+Delimiter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that generates Doc\+Book output for \mbox{\hyperlink{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}{usage()}} method for the given \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} and its Args. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a5e97f659fa1ab3b060a31e8bd7a0a40e}\label{classTCLAP_1_1DocBookOutput_a5e97f659fa1ab3b060a31e8bd7a0a40e}} 
+\index{TCLAP::DocBookOutput@{TCLAP::DocBookOutput}!failure@{failure}}
+\index{failure@{failure}!TCLAP::DocBookOutput@{TCLAP::DocBookOutput}}
+\doxysubsubsection{\texorpdfstring{failure()}{failure()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Doc\+Book\+Output\+::failure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c,  }\item[{\mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints (to stderr) an error message, short usage Can be overridden to produce alternative behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+{\em e} & -\/ The \mbox{\hyperlink{classTCLAP_1_1ArgException}{Arg\+Exception}} that caused the failure. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ad23a57ac3d8d957a4328fc78aec94e16}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a7546eaf3a0effeea1030afb27b4c698f}\label{classTCLAP_1_1DocBookOutput_a7546eaf3a0effeea1030afb27b4c698f}} 
+\index{TCLAP::DocBookOutput@{TCLAP::DocBookOutput}!substituteSpecialChars@{substituteSpecialChars}}
+\index{substituteSpecialChars@{substituteSpecialChars}!TCLAP::DocBookOutput@{TCLAP::DocBookOutput}}
+\doxysubsubsection{\texorpdfstring{substituteSpecialChars()}{substituteSpecialChars()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Doc\+Book\+Output\+::substitute\+Special\+Chars (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s,  }\item[{char}]{r,  }\item[{std\+::string \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Substitutes the char r for string x in string s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ The string to operate on. \\
+\hline
+{\em r} & -\/ The char to replace. \\
+\hline
+{\em x} & -\/ What to replace r with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}\label{classTCLAP_1_1DocBookOutput_adc1ec93f3f7e5e912690be01c5e7d6e2}} 
+\index{TCLAP::DocBookOutput@{TCLAP::DocBookOutput}!usage@{usage}}
+\index{usage@{usage}!TCLAP::DocBookOutput@{TCLAP::DocBookOutput}}
+\doxysubsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Doc\+Book\+Output\+::usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the usage to stdout. 
+
+Can be overridden to produce alternative behavior. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_a685b13db5bf6bbe5159e49169cd96bbe}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+\mbox{\Hypertarget{classTCLAP_1_1DocBookOutput_a3ccf7671dcae82aba5f0e91850ae25a4}\label{classTCLAP_1_1DocBookOutput_a3ccf7671dcae82aba5f0e91850ae25a4}} 
+\index{TCLAP::DocBookOutput@{TCLAP::DocBookOutput}!version@{version}}
+\index{version@{version}!TCLAP::DocBookOutput@{TCLAP::DocBookOutput}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily void TCLAP\+::\+Doc\+Book\+Output\+::version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTCLAP_1_1CmdLineInterface}{Cmd\+Line\+Interface}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prints the version to stdout. 
+
+Can be overridden to produce alternative behavior. 
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ The \mbox{\hyperlink{classTCLAP_1_1CmdLine}{Cmd\+Line}} object the output is generated for. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTCLAP_1_1CmdLineOutput_ae052fea473132482296de55edb3dd480}{TCLAP\+::\+Cmd\+Line\+Output}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/christian/\+Documents/joshai-\/challenge/third-\/party/tclap/Doc\+Book\+Output.\+h\end{DoxyCompactItemize}

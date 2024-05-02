@@ -1,0 +1,48 @@
+\hypertarget{data__store_8h}{}\doxysection{/home/christian/\+Documents/joshai-\/challenge/include/interface/data\+\_\+store.h File Reference}
+\label{data__store_8h}\index{/home/christian/Documents/joshai-\/challenge/include/interface/data\_store.h@{/home/christian/Documents/joshai-\/challenge/include/interface/data\_store.h}}
+
+
+This is the central mechanism for data storage across the classes used in the program. Its job is to handle the validity and comparison of the data. It also gives all sections of the code a central place to access data so they dont all need a dependency on the network connection. If this project were to be scaled this would also allow for multiple device types. This would mean a data store for each device which is not ideal but for this application is fine. As scale the data should be templatized but the data manager (this) should not.  
+
+
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}interface/light.\+h\char`\"{}}\newline
+Include dependency graph for data\+\_\+store.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{data__store_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{data__store_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDataStore}{Data\+Store$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em The data store class responsible to handling all data received from the server and providing it to all subsystems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the central mechanism for data storage across the classes used in the program. Its job is to handle the validity and comparison of the data. It also gives all sections of the code a central place to access data so they dont all need a dependency on the network connection. If this project were to be scaled this would also allow for multiple device types. This would mean a data store for each device which is not ideal but for this application is fine. As scale the data should be templatized but the data manager (this) should not. 
+
+\begin{DoxyAuthor}{Author}
+Christian Prather 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
